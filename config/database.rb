@@ -23,9 +23,10 @@ end
 
 # Heroku controls what database we connect to by setting the DATABASE_URL environment variable
 # We need to respect that if we want our Sinatra apps to run on Heroku without modification
-db = URI.parse(ENV['DATABASE_URL'] || "postgres://localhost/#{APP_NAME}_#{Sinatra::Application.environment}")
+# db = URI.parse(ENV['DATABASE_URL'])
+db = URI.parse('jdbc:mysql://localhost:3306/seanspeaks')
 
-DB_NAME = db.path[1..-1]
+DB_NAME = "seanspeaks"
 
 # Note:
 #   Sinatra::Application.environment is set to the value of ENV['RACK_ENV']
@@ -33,11 +34,10 @@ DB_NAME = db.path[1..-1]
 #   to :development
 
 ActiveRecord::Base.establish_connection(
-  :adapter  => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
-  :host     => db.host,
-  :port     => db.port,
-  :username => db.user,
-  :password => db.password,
-  :database => DB_NAME,
+  :adapter  => "mysql2",
+  :host     => "localhost",
+  :username => "root",
+  :password => "Theansweris42",
+  :database => 'seanspeaks',
   :encoding => 'utf8'
 )

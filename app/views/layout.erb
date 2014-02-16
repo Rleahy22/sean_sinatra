@@ -10,14 +10,52 @@
   <!--
     application.css is where you put your styles
   -->
+  <!--[if !IE]><!-->
   <link rel="stylesheet" href="/css/application.css">
+  <!--<![endif]-->
+
+  <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="/css/ie-only.css" />
+  <![endif]-->
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
-  <title>Ryan Leahy</title>
+  <title>Sean Leahy Speaks</title>
 </head>
 <body>
-  <%= yield %>
+  <div class="container">
+    <img src="images/header.jpg" class="header">
+    <% if @main %>
+      <a href="/testimonials"><img src="images/testimonial_animated.gif" border="0" class="gif"></a>    
+    <% end %>
+    <div class="nav">
+      <ul>
+        <li class="nav-li nav-link"><a href="/" class="links">HOME</a></li>
+        <li class="first-bar nav-li">|</li>
+        <li class="nav-li nav-link"><a href="/about" class="links">ABOUT YOU</a></li>
+        <li class="bar nav-li">|</li>
+        <li class="nav-li nav-link"><a href="/topics" class="links">TOPICS</a></li>
+        <li class="bar nav-li">|</li>
+        <li class="nav-li nav-link"><a href="/guarantee" class="links">GUARANTEE</a></li>
+        <li class="bar nav-li">|</li>
+        <li class="nav-li nav-link"><a href="/video" class="links">VIDEO</a></li>
+        <li class="bar nav-li">|</li>
+        <li class="nav-li nav-link"><a href="/handouts" class="links">HANDOUTS</a></li>
+        <li class="bar nav-li">|</li>
+        <li class="nav-li nav-link"><a href="/testimonials" class="links">TESTIMONIALS</a></li>
+        <li class="bar nav-li">|</li>
+        <li class="nav-li nav-link"><a href="/contact" class="links">CONTACT</a></li>
+        <li class="bar nav-li">|</li>
+        <li class="nav-li nav-link"><a href="/salesshot" class="links">SALES SHOT</a></li>
+        <li class="last-bar nav-li">|</li>
+        <li class="nav-li nav-link"><a href="/signup" class="links">SIGN UP</a></li>
+      </ul>
+    </div>
+    <%= yield %>
+    <div class="footer">
+      <p id="footer-p">Copyright &copy; 2013, Sean Leahy, LLC <span id="contact">(847) 922-2181<span class="vert-bar">|</span><a href="mailto:sean@seanleahy.com">Sean@SeanLeahy.com</a><span class="vert-bar">|</span><a href="http://www.seanleahy.com">www.SeanLeahy.com</a></span></p>
+    </div>
+  </div>
 </body>
 </html>

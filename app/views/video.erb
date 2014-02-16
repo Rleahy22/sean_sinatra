@@ -1,0 +1,15 @@
+<div class="dynamic-div">
+	<div class="video-div">
+		<h1 class="dynamic-header" id="video-header">VIDEO</h1>
+		<div id="video">
+			<img src="images/vidthumbnail.jpg" id="thumbnail">
+		</div>
+	</div>
+</div>
+<script>
+   $(document).ready(function() {
+      $("#video").click(function() {
+        $("#video").html('<iframe width="700" height="394" src="//www.youtube.com/embed/PCy4f99hxEc?autoplay=1" frameborder="0" allowfullscreen id="video-youtube"></iframe>');
+      });
+    });
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- 
+    normalize.css removes cross-browser differences in defaults, e.g.,
+    differences in how form elements appear between Firefox and IE
+    See: http://necolas.github.com/normalize.css/
+  -->
+  <link rel="stylesheet" href="/css/normalize.css">
+  <!--
+    application.css is where you put your styles
+  -->
+  <!--[if !IE]><!-->
+  <link rel="stylesheet" href="/css/application.css">
+  <!--<![endif]-->
+
+  <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="/css/ie-only.css" />
+  <![endif]-->
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/application.js"></script>
+
+  <title>Sean Leahy Speaks</title>
+</head>
+<body>
+  <div class="container">
+    <img src="images/header.jpg" class="header">
+    <%= yield %>
+    <div class="footer">
+      <p id="footer-p">Copyright &copy; 2013, Sean Leahy, LLC <span id="contact">(847) 922-2181<span class="vert-bar">|</span><a href="mailto:sean@seanleahy.com">Sean@SeanLeahy.com</a><span class="vert-bar">|</span><a href="http://www.seanleahy.com">www.SeanLeahy.com</a></span></p>
+    </div>
+  </div>
+</body>
+</html>

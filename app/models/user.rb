@@ -1,25 +1,19 @@
 class User < ActiveRecord::Base
-	include BCrypt
-	validates :name, :uniqueness => true 
+  attr_accessible :email, :password, :password_confirmation
+  has_secure_password
 
-	def password
-		@password ||= Password.new(password_hash)
-	end
+  before_save { |user| self.email = email.downcase }
+  before_create :create_remember_token
 
-	def password=(new_password)
-		@password = Password.create(new_password)
-		self.password_hash = @password
-	end
+  validates :email, presence: true,
+                    format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i },
+                    uniqueness: { case_sensitive: false }
+  validates :password, presence: true,
+                       length: { minimum: 6 }
 
-	def self.create(params)
-		@user = User.new(params)
-		@user.password = params[:password]
-		@user.save!
-		@user
-	end
+  private
 
-	def self.verify(params)
-		@user = User.find_by_name(params[:name])
-		@user.password == params[:password] ? @user : nil
-	end
+    def create_remember_token
+      self.remember_token = SecureRandom.urlsafe_base64
+    end
 end

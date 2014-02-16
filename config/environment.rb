@@ -11,7 +11,7 @@ require 'rubygems'
 require 'uri'
 require 'pathname'
 
-require 'pg'
+require 'mysql2'
 require 'active_record'
 require 'logger'
 

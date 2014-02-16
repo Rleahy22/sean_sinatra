@@ -1,0 +1,79 @@
+<a href="/testimonials"><img src="images/testimonial_animated.gif" border="0" class="gif"></a>
+<div class="nav">
+  <ul>
+    <li class="nav-li nav-link"><a href="/" class="links">HOME</a></li>
+    <li class="first-bar nav-li">|</li>
+    <li class="nav-li nav-link"><a href="/about" class="links">ABOUT YOU</a></li>
+    <li class="bar nav-li">|</li>
+    <li class="nav-li nav-link"><a href="/topics" class="links">TOPICS</a></li>
+    <li class="bar nav-li">|</li>
+    <li class="nav-li nav-link"><a href="/guarantee" class="links">GUARANTEE</a></li>
+    <li class="bar nav-li">|</li>
+    <li class="nav-li nav-link"><a href="/video" class="links">VIDEO</a></li>
+    <li class="bar nav-li">|</li>
+    <li class="nav-li nav-link"><a href="/handouts" class="links">HANDOUTS</a></li>
+    <li class="bar nav-li">|</li>
+    <li class="nav-li nav-link"><a href="/testimonials" class="links">TESTIMONIALS</a></li>
+    <li class="bar nav-li">|</li>
+    <li class="nav-li nav-link"><a href="/contact" class="links">CONTACT</a></li>
+    <li class="bar nav-li">|</li>
+    <li class="nav-li nav-link"><a href="/salesshot" class="links">SALES SHOT</a></li>
+    <li class="last-bar nav-li">|</li>
+    <li class="nav-li nav-link"><a href="/signup" class="links">SIGN UP</a></li>
+  </ul>
+</div>
+<div class="main">
+  <div class="dont">
+    <ul id="pitch-ul">
+      <li class="pitch">"The <u>ONLY</u> sales training that I used the next day."</li>
+      <li class="pitch">The <u>ONLY</u> speaker focused on business to business and repeat customers</li>
+      <li class="pitch">"The <u>ONLY</u> speaker who customized everything to our business."</li>
+      <li class="pitch">"The <u>ONLY</u> speaker our people insisted we bring back."</li>
+    </ul>
+    <div id="index-video">
+      <img src="images/vidthumbnail.jpg" id="index-thumbnail">
+    </div>
+  </div>
+  <div class="break"></div>
+  <div class="order">
+    <h1 id="tips">100 Fast Paced, Hard Hitting Sales Tips</h1>
+    <div class="quantity">
+      <img src="images/ssbook.png" id="book">
+    </div>
+    <div class="buy-now">
+      <a href="http://www.amazon.com/The-Sales-Shot-Paced-Hitting/dp/1477148248/ref=sr_1_1?ie=UTF8&qid=1362522800&sr=8-1&keywords=leahy+sales+shot" target="_blank"><img src="images/amazon.png" id="amazon" class="order-links"></a>
+      <a href="http://www.barnesandnoble.com/w/the-sales-shot-sean-p-leahy/1114703213?ean=9781477148259" target="_blank"><img src="images/bnn.png" id="barnes" class="order-links"></a>
+    </div>
+    <div id="book-review">
+      <p id="review-p">"The Sales Shots are great! I often use their messages in my training of our insurance agents."</p>
+      <p class="review-source">Dan Hickey</p>
+      <p class="review-source">Sr. Education Professional</p>
+      <p class="review-source">Allstate Insurance Company </p>
+    </div>
+    <p id="inquire">Contact sean@seanleahy.com to inquire</p>
+    <hr>
+    <div id="checklist">
+      <a href="/sales-checklist"><img src="images/sales_checklist.png" id="checklist-img">
+      <button id="order-checklist">Order Your Sales Checklist</button></a>
+    </div>
+  </div>
+</div>
+<script>
+   $(document).ready(function() {
+      $("#index-video").click(function() {
+        // $("#index-video").html('<iframe width="400" height="225" src="//www.youtube.com/embed/PCy4f99hxEc?autoplay=1" frameborder="0" allowfullscreen></iframe>');
+        $('body').append('<div class="opaque"></div>')
+        $('body').append('<div class="player"><button id="close">X</button></div><iframe id="index-vid" width="700" height="394" src="//www.youtube.com/embed/PCy4f99hxEc?autoplay=1" frameborder="0" allowfullscreen></iframe>')
+        $( "#close" ).animate({
+          left: "+=800",
+        }, 1, function() {
+          // Animation complete.
+        });
+      });
+      $('body').on('click', '#close', function(){
+        $('.opaque').remove();
+        $('.player').remove();
+        $('#index-vid').remove()
+      })
+    });
+</script>

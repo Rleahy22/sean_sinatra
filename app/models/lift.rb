@@ -1,3 +1,0 @@
-class Lift < ActiveRecord::Base
-  # Remember to create a migration!
-end
