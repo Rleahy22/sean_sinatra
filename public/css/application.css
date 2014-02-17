@@ -978,7 +978,11 @@ hr {
 	margin: 10px;
 }
 
-#bracket > * {
+.bracket {
+	display: none;
+}
+
+.bracket > * {
 	vertical-align: middle;
 }
 
@@ -998,16 +1002,26 @@ hr {
 	text-align: center;
 }
 
-#round2 .team {
+.round2 .team {
 	margin: 32px 0;
 }
 
-#round3 .team {
+.round3 .team {
 	margin: 85px 0;
 }
 
-#round4 .team {
+.round4 .team {
 	margin: 190px 0;
+}
+
+#list {
+	list-style-type: none;
+	margin: 10px;
+}
+
+.idea {
+	width: 150px;
+	margin: 10px;
 }
 
 /*Firefox*/

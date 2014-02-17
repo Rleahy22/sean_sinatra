@@ -1,76 +1,143 @@
 <div id="tournament">
-  <button id="seed">Fill Seeds</button>
-  <div id="bracket">
-    <div class="round" id="round1">
-      <div class="matchup" id="m1">
-        <div class="team" id="team1">Click to Enter</div>
-        <div class="team" id="team2">Click to Enter</div>
+  <!-- <button id="seed">Enter Ideas</button> -->
+  <input id="seed" value="Enter Idea" autofocus>
+  <button id="add">Add Another Idea</button>
+  <button id="begin">Begin Tournament</button>
+  <ul id="list"></ul>
+
+  <div class="bracket" id="bracket4">
+    <div class="round round1">
+     <div class="matchup m1">
+        <div class="team team1"></div>
+        <div class="team team2"></div>
       </div>
-      <div class="matchup" id="m2">
-        <div class="team" id="team3">Click to Enter</div>
-        <div class="team" id="team4">Click to Enter</div>
-      </div>
-      <div class="matchup" id="m3">
-        <div class="team" id="team5">Click to Enter</div>
-        <div class="team" id="team6">Click to Enter</div>
-      </div>
-      <div class="matchup" id="m4">
-        <div class="team" id="team7">Click to Enter</div>
-        <div class="team" id="team8">Click to Enter</div>
-      </div>
-      <div class="matchup" id="m5">
-        <div class="team" id="team9">Click to Enter</div>
-        <div class="team" id="team10">Click to Enter</div>
-      </div>
-      <div class="matchup" id="m6">
-        <div class="team" id="team11">Click to Enter</div>
-        <div class="team" id="team12">Click to Enter</div>
-      </div>
-      <div class="matchup" id="m7">
-        <div class="team" id="team13">Click to Enter</div>
-        <div class="team" id="team14">Click to Enter</div>
-      </div>
-      <div class="matchup" id="m8">
-        <div class="team" id="team15">Click to Enter</div>
-        <div class="team" id="team16">Click to Enter</div>
+      <div class="matchup m2">
+        <div class="team team3"></div>
+        <div class="team team4"></div>
       </div>
     </div>
-    <div class="round" id="round2">
-      <div class="matchup" id="m9">
-        <div class="team" id="w1"></div>
-        <div class="team" id="w2"></div>
-      </div>
-      <div class="matchup" id="m10">
-        <div class="team" id="w3"></div>
-        <div class="team" id="w4"></div>
-      </div>
-      <div class="matchup" id="m11">
-        <div class="team" id="w5"></div>
-        <div class="team" id="w6"></div>
-      </div>
-      <div class="matchup" id="m12">
-        <div class="team" id="w7"></div>
-        <div class="team" id="w8"></div>
+    <div class="round round2">
+      <div class="matchup m3">
+        <div class="team w1"></div>
+        <div class="team w2"></div>
       </div>
     </div>
-    <div class="round" id="round3">
-      <div class="matchup" id="m13">
-        <div class="team" id="w9"></div>
-        <div class="team" id="w10"></div>
+    <div class="winner">
+      <div class="team w3"></div>
+    </div>
+  </div>
+
+  <div class="bracket" id="bracket8">
+    <div class="round round1">
+      <div class="matchup m1">
+        <div class="team team1"></div>
+        <div class="team team2"></div>
       </div>
-      <div class="matchup" id="m14">
-        <div class="team" id="w11"></div>
-        <div class="team" id="w12"></div>
+      <div class="matchup m2">
+        <div class="team team3"></div>
+        <div class="team team4"></div>
+      </div>
+      <div class="matchup m3">
+        <div class="team team5"></div>
+        <div class="team team6"></div>
+      </div>
+      <div class="matchup m4">
+        <div class="team team7"></div>
+        <div class="team team8"></div>
       </div>
     </div>
-    <div class="round" id="round4">
-      <div class="matchup" id="m15">
-        <div class="team" id="w13"></div>
-        <div class="team" id="w14"></div>
+    <div class="round round2">
+      <div class="matchup m5">
+        <div class="team w1"></div>
+        <div class="team w2"></div>
+      </div>
+      <div class="matchup m6">
+        <div class="team w3"></div>
+        <div class="team w4"></div>
       </div>
     </div>
-    <div id="winner">
-      <div class="team" id="w15"></div>
+    <div class="round round3">
+      <div class="matchup m7">
+        <div class="team w5"></div>
+        <div class="team w6"></div>
+      </div>
+    </div>
+    <div class="winner">
+      <div class="team w7"></div>
+    </div>
+  </div>
+
+  <div class="bracket" id="bracket16">
+    <div class="round round1">
+      <div class="matchup m1">
+        <div class="team team1"></div>
+        <div class="team team2"></div>
+      </div>
+      <div class="matchup m2">
+        <div class="team team3"></div>
+        <div class="team team4"></div>
+      </div>
+      <div class="matchup m3">
+        <div class="team team5"></div>
+        <div class="team team6"></div>
+      </div>
+      <div class="matchup m4">
+        <div class="team team7"></div>
+        <div class="team team8"></div>
+      </div>
+      <div class="matchup m5">
+        <div class="team team9"></div>
+        <div class="team team10"></div>
+      </div>
+      <div class="matchup m6">
+        <div class="team team11"></div>
+        <div class="team team12"></div>
+      </div>
+      <div class="matchup m7">
+        <div class="team team13"></div>
+        <div class="team team14"></div>
+      </div>
+      <div class="matchup m8">
+        <div class="team team15"></div>
+        <div class="team team16"></div>
+      </div>
+    </div>
+    <div class="round round2">
+      <div class="matchup m9">
+        <div class="team w1"></div>
+        <div class="team w2"></div>
+      </div>
+      <div class="matchup m10">
+        <div class="team w3"></div>
+        <div class="team w4"></div>
+      </div>
+      <div class="matchup m11">
+        <div class="team w5"></div>
+        <div class="team w6"></div>
+      </div>
+      <div class="matchup m12">
+        <div class="team w7"></div>
+        <div class="team w8"></div>
+      </div>
+    </div>
+    <div class="round round3">
+      <div class="matchup m13">
+        <div class="team w9"></div>
+        <div class="team w10"></div>
+      </div>
+      <div class="matchup m14">
+        <div class="team w11"></div>
+        <div class="team w12"></div>
+      </div>
+    </div>
+    <div class="round round4">
+      <div class="matchup m15">
+        <div class="team w13"></div>
+        <div class="team w14"></div>
+      </div>
+    </div>
+    <div class="winner">
+      <div class="team w15"></div>
     </div>
   </div>
 </div>
