@@ -976,10 +976,47 @@ hr {
 
 #tournament {
 	margin: 10px;
+	height: 795px;
+	/*padding-bottom: 30px;*/
+	position: relative;
+}
+
+#tournament-controls {
+	margin: 20px;
+	width: 450px;
+}
+
+#tournament-controls div {
+	margin: 10px 0;
+}
+
+#tournament-details {
+	position: absolute;
+	width: 440px;
+	top: 100px;
+	left: 30px;
+}
+
+#company-header {
+	font-size: 22px;
+}
+
+#goal-header {
+	font-style: italic;
+	font-size: 20px;
 }
 
 .bracket {
 	display: none;
+	margin-left: 20px;
+}
+
+#bracket4 {
+	margin-top: 150px;
+}
+
+#bracket8 {
+	margin-top: 40px;
 }
 
 .bracket > * {
@@ -990,16 +1027,139 @@ hr {
 	display: inline-block;
 }
 
+.consolation {
+	display: block;
+	position: relative;
+}
+
+#bracket4 .consolation {
+	margin: 80px 0 0 180px;
+}
+
+#bracket8 .consolation {
+	margin: -20px 0 0 360px;
+}
+
+#bracket16 .consolation {
+	margin: -200px 0 0 450px;
+}
+
+.consolation .team:first-child {
+	margin-bottom: 40px;
+}
+
+.third-place {
+	position: absolute;
+	bottom: 0;
+}
+
+#bracket4 .third-place {
+	right: 350px;
+}
+
+#bracket8 .third-place {
+	right: 180px;
+}
+
+#bracket16 .third-place {
+	right: 100px;
+}
+
+.third-place .team {
+	font-weight: bolder;
+	background: #00FF00;
+	color: black;		
+}
+
+.consolation-header {
+	bottom: 140px;
+	position: absolute;
+}
+
+#bracket4 .consolation-header {
+	right: 450px;
+}
+
+#bracket8 .consolation-header {
+	right: 270px;
+}
+
+#bracket16 .consolation-header {
+	right: 200px;
+}
+
 .matchup {
 	width: 150px;
-	/*border: 2px solid black;*/
+	/*margin: 10px 10px;*/
+}
+
+#bracket4 .matchup {
 	margin: 10px 10px;
 }
 
+#bracket8 .round1 .matchup {
+	margin: 20px 10px;
+}
+
+#bracket8 .round2 .matchup {
+	margin: 80px 10px;
+}
+
+#bracket8 .round3 .matchup {
+	margin: 0 20px 0 10px;
+}
+
+#bracket8 .round2 .team {
+	margin: 55px 0;
+}
+
+#bracket8 .round3 .team {
+	margin: 175px 0;
+}
+
+#bracket16 .round1 .matchup {
+	margin: 20px 10px;
+}
+
+#bracket16 .round2 .matchup {
+	margin: 100px 10px;
+}
+
+#bracket16 .round2 .team {
+	margin: 40px 0;
+}
+
+#bracket16 .round3 .matchup {
+	margin: 200px 10px;
+}
+
+#bracket16 .round3 .team {
+	margin: 170px 0;
+}
+
+#bracket16 .round4 .team {
+	margin: 420px 0;
+}
+
 .team {
-	height: 20px;
+	height: 40px;
 	border: 2px solid black;
+	border-radius: 15px;
 	text-align: center;
+	color: #FFFFFF;
+	margin: 5px 0;
+	width: 150px;
+}
+
+.outer {
+	display: table;
+}
+
+.outer p {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	border-radius: 15px;
 }
 
 .round2 .team {
@@ -1014,14 +1174,84 @@ hr {
 	margin: 190px 0;
 }
 
+.winner {
+	width: 150px;
+}
+
+.winner .team {
+	font-weight: bolder;
+	background: #00FF00;
+	color: black;		
+}
+
 #list {
-	list-style-type: none;
-	margin: 10px;
+	list-style-type: decimal;
+	width: 800px;
+	display: none;
+	position: absolute;
+	top: 220px;
+	left: 30px;
+}
+
+#list h1 {
+	font-size: 20px;
+	margin-bottom: 10px;
 }
 
 .idea {
-	width: 150px;
-	margin: 10px;
+	width: 600px;
+	margin: 15px 10px 10px 40px;
+	font-size: 16px;
+}
+
+#winners {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 50px;
+	width: 300px;
+	list-style-type: none;
+}
+
+#winners li {
+	margin: 10px 0;
+	font-size: 16px;
+	line-height: 30px;
+	text-align: center;
+}
+
+#winners p {
+	font-size: 18px;
+	font-weight: bolder;
+	font-style: italic;
+	margin: 0;
+}
+
+#winners #p-first {
+	color: #00FF00;
+	text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+}
+
+#winners #p-second {
+	color: #102D5A;
+	/*text-shadow:
+      -1px -1px 0 #FFF,
+      1px -1px 0 #FFF,
+      -1px 1px 0 #FFF,
+      1px 1px 0 #FFF;*/
+}
+
+#winners #p-third {
+	color: black;
+	/*text-shadow:
+      -1px -1px 0 #FFF,
+      1px -1px 0 #FFF,
+      -1px 1px 0 #FFF,
+      1px 1px 0 #FFF;*/
 }
 
 /*Firefox*/
