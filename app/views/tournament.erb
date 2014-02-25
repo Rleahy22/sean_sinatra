@@ -2,11 +2,11 @@
   <!-- <button id="seed">Enter Ideas</button> -->
   <div id="tournament-controls">
     <div>
-      <input id="company-name" value="Company Name" maxlength="35">
+      <input id="company-name" value="Company Name" maxlength="26">
       <button id="company-button">Enter</button>
     </div>
     <div>
-      <input id="goal-field" value="Goal" maxlength="70">
+      <input id="goal-field" value="Objective" maxlength="70">
       <button id="goal-button">Enter</button>
     </div>
     <div>
@@ -24,10 +24,11 @@
   </ul>
 
   <ul id="winners">
-    <li id="winners-first">First Place:</li>
-    <li id="winners-second">Second Place:</li>
-    <li id="winners-third">Third Place:</li>
-    <li><button>Export to PDF/Print</button></li>
+  <h1>Top Three Priorities</h1>
+    <li id="winners-first"></li>
+    <li id="winners-second"></li>
+    <li id="winners-third"></li>
+    <button id="export">Print Results</button>
   </ul>
 
   <div class="bracket" id="bracket4">
@@ -37,15 +38,15 @@
           <p class="team1"></p>
         </div>
         <div class="outer team">
-          <p class="team2"></p>
+          <p class="team4"></p>
         </div>
       </div>
       <div class="matchup m2">
         <div class="outer team">
-          <p class="team3"></p>
+          <p class="team2"></p>
         </div>
         <div class="outer team">
-          <p class="team4"></p>
+          <p class="team3"></p>
         </div>
       </div>
     </div>
@@ -91,20 +92,20 @@
           <p class="team1"></p>
         </div>
         <div class="outer team">
-          <p class="team2"></p>
+          <p class="team8"></p>
         </div>
       </div>
       <div class="matchup m2">
         <div class="outer team">
-          <p class="team3"></p>
+          <p class="team4"></p>
         </div>
         <div class="outer team">
-          <p class="team4"></p>
+          <p class="team5"></p>
         </div>
       </div>
       <div class="matchup m3">
         <div class="outer team">
-          <p class="team5"></p>
+          <p class="team3"></p>
         </div>
         <div class="outer team">
           <p class="team6"></p>
@@ -112,10 +113,10 @@
       </div>
       <div class="matchup m4">
         <div class="outer team">
-          <p class="team7"></p>
+          <p class="team2"></p>
         </div>
         <div class="outer team">
-          <p class="team8"></p>
+          <p class="team7"></p>
         </div>
       </div>
     </div>
@@ -152,6 +153,7 @@
           <p class="w7"></p>
         </div>
     </div>
+    <button class="challenge" id="challenge8">Challenge</button>
     <div class="round consolation">
       <div class="matchup m8">
         <div class="outer team">
@@ -179,15 +181,15 @@
           <p class="team1"></p>
         </div>
         <div class="outer team">
-          <p class="team2"></p>
+          <p class="team16"></p>
         </div>
       </div>
       <div class="matchup m2">
         <div class="outer team">
-          <p class="team3"></p>
+          <p class="team8"></p>
         </div>
         <div class="outer team">
-          <p class="team4"></p>
+          <p class="team9"></p>
         </div>
       </div>
       <div class="matchup m3">
@@ -195,47 +197,47 @@
           <p class="team5"></p>
         </div>
         <div class="outer team">
-          <p class="team6"></p>
+          <p class="team12"></p>
         </div>
       </div>
       <div class="matchup m4">
         <div class="outer team">
-          <p class="team7"></p>
+          <p class="team4"></p>
         </div>
         <div class="outer team">
-          <p class="team8"></p>
+          <p class="team13"></p>
         </div>
       </div>
       <div class="matchup m5">
         <div class="outer team">
-          <p class="team9"></p>
+          <p class="team6"></p>
         </div>
         <div class="outer team">
-          <p class="team10"></p>
+          <p class="team11"></p>
         </div>
       </div>
       <div class="matchup m6">
         <div class="outer team">
-          <p class="team11"></p>
-        </div>
-        <div class="outer team">
-          <p class="team12"></p>
-        </div>
-      </div>
-      <div class="matchup m7">
-        <div class="outer team">
-          <p class="team13"></p>
+          <p class="team3"></p>
         </div>
         <div class="outer team">
           <p class="team14"></p>
         </div>
       </div>
-      <div class="matchup m8">
+      <div class="matchup m7">
         <div class="outer team">
-          <p class="team15"></p>
+          <p class="team7"></p>
         </div>
         <div class="outer team">
-          <p class="team16"></p>
+          <p class="team10"></p>
+        </div>
+      </div>
+      <div class="matchup m8">
+        <div class="outer team">
+          <p class="team2"></p>
+        </div>
+        <div class="outer team">
+          <p class="team15"></p>
         </div>
       </div>
     </div>
@@ -306,6 +308,7 @@
           <p class="w15"></p>
         </div>
     </div>
+    <button class="challenge" id="challenge16">Challenge</button>
     <div class="round consolation">
       <div class="matchup m16">
         <div class="outer team">
@@ -323,6 +326,17 @@
       <div class="consolation-header">
         <h2>Consolation</h2>
       </div>
+    </div>
+  </div>
+  <div id="challenge-div">
+    <h3>Which idea would you like to challenge?</h3>
+    <select id="challenged">
+    </select>
+    <h3>Which idea would you like to challenge it with?</h3>
+    <select id="challengers"></select>
+    <div id="challenge-buttons">
+      <button id="challenge-cancel">Cancel</button>
+      <button id="challenge-ok">OK</button>
     </div>
   </div>
 </div>

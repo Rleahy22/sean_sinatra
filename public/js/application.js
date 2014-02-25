@@ -2,6 +2,8 @@ $(document).ready(function() {
   var seeds = [];
   var began = false;
   var size = {};
+  var losers = [];
+  var challengees = [];
 
   function appendVideo() {
     var videoDiv = '<div class="player"><button id="close">X</button></div><iframe id="index-vid" width="700" height="394" src="//www.youtube.com/embed/PCy4f99hxEc?autoplay=1" frameborder="0" allowfullscreen></iframe>';
@@ -33,7 +35,7 @@ $(document).ready(function() {
       if (seeds.length < 16) {
         addSeed();
       } else {
-        alert("Please limit the number of ideas to 16 for a single torunament.");
+        alert("Please limit the number of ideas to 16 for a single tournament.");
         $('#seed').val('');
       }
     }
@@ -105,7 +107,7 @@ $(document).ready(function() {
       alert('Goal cannot be blank.');
       $('#goal-field').focus();
     } else {
-      $('#goal-header').html(goal);
+      $('#goal-header').html("Objective: " + goal);
     }
   }
 
@@ -122,7 +124,7 @@ $(document).ready(function() {
       alert('Company name cannot be blank.');
       $('#company-name').focus();
     } else {
-      $('#company-header').html(company);
+      $('#company-header').html("Company: " + company);
     }
   }
 
@@ -132,6 +134,18 @@ $(document).ready(function() {
 
   $('#goal-button').on('click', function() {
     addGoal();
+  })
+
+  $('#goal-field').on('focusin', function() {
+    $('#goal-field').val('');
+  })
+
+  $('#company-name').on('focusin', function() {
+    $('#company-name').val('');
+  })
+
+  $('#seed').on('focusin', function() {
+    $('#seed').val('');
   })
 
   $('#add').on('click', function() {
@@ -154,12 +168,12 @@ $(document).ready(function() {
     } else {
 
         if (numSeeds <= 8 && numSeeds > 4) { 
-          for (var i = 1; seeds.length < 8; i += 2) {
-            seeds.splice(i, 0, "(bye)");
+          while (seeds.length < 8) {
+            seeds.push("(bye)");
           }
         } else if (numSeeds <= 16 && numSeeds > 4) {
-          for (var i =1; seeds.length < 16; i +=2) {
-            seeds.splice(i, 0, "(bye)");
+          while (seeds.length < 16) {
+            seeds.push("(bye)");
           }
         }
 
@@ -188,7 +202,8 @@ $(document).ready(function() {
 
     for (var j = 1; j < 17; j++) {
       var team = $('.team' + j);
-      var otherTeam = $('.team' + (j - 1)).html();
+      var otherTeamEl = $(team.parent().siblings()[0]).children()[0]
+      var otherTeam = $(otherTeamEl).html();
 
       if (team.html() === "(bye)") {
         var matchup = team.parent().parent().attr('class').substring(9);
@@ -205,33 +220,33 @@ $(document).ready(function() {
         $('#winners').show();
         winPlace(winner, loser);
       } else if (matchup == 4) {
-        $('#winners-third').html('Third Place:<p id="p-third"> ' + winner + '</p>');
+        $('#winners-third').html('<p id="p-third">' + winner + '</p>');
       }
     } else if (size == 8) {
       if (matchup == 7) {
         $('#winners').show();
         winPlace(winner, loser);
       } else if (matchup == 8) {
-        $('#winners-third').html('Third Place:<p id="p-third"> ' + winner + '</p>');
+        $('#winners-third').html('<p id="p-third">' + winner + '</p>');
       }
     } else if (size == 16) {
       if (matchup == 15) {
         $('#winners').show();
         winPlace(winner, loser);
       } else if (matchup == 16) {
-        $('#winners-third').html('Third Place:<p id="p-third"> ' + winner + '</p>');
+        $('#winners-third').html('<p id="p-third">' + winner + '</p>');
       }
     }
   }
 
   winPlace = function(winner, loser) {
-    $('#winners-first').html('First Place:<p id="p-first"> ' + winner + '</p>');
-    $('#winners-second').html('Second Place:<p id="p-second"> ' + loser + '</p>');
+    $('#winners-first').html('<p id="p-first">' + winner + '</p>');
+    $('#winners-second').html('<p id="p-second">' + loser + '</p>');
   }
 
   $('#tournament').on('click', '.team', function() {
     var winner = $.trim($(this).text());
-    var loser = $(this).siblings().text();
+    var loser = $.trim($(this).siblings().text());
     var matchup = $(this).parent().attr('class').substring(9);
     $('.w' + matchup).html(winner).effect("highlight", {}, 750);
     teamSize(winner.length, $('.w' + matchup));
@@ -240,5 +255,106 @@ $(document).ready(function() {
     teamSize(winner.length, $('.l' + matchup));
 
     fillWinners(winner, loser, matchup);
+    var winnerIndex = losers.indexOf(winner);
+    if (winnerIndex > -1) {
+      losers.splice(winnerIndex, 1);
+    }
+    losers.push(loser);
+  });
+
+  $('.bracket').on('click', '.challenge', function() {
+    if (size == 8) {
+      for (var i = 1; i < 5; i++) {
+        challengees.push($('.w' + i));
+        $('#challenged').append('<option>' + challengees[i - 1].html() + '</option>');
+      }
+    } else if (size == 16) {
+      for (var i = 9; i < 13; i++) {
+        challengees.push($('.w' + i));
+        $('#challenged').append('<option>' + challengees[i - 9].html() + '</option>');
+      }
+    }
+
+    $('#challenge-div').show();
+    losers.sort();
+    for(var loser in losers) {
+      $('#challengers').append('<option>' + losers[loser] + '</option>')
+    }
+  });
+
+  $('#challenge-ok').on('click', function() {
+    for (var i in challengees) {
+      if (challengees[i].html() === $('#challenged option:selected').text()) {
+        challengees[i].html($('#challengers option:selected').text());
+      }
+    }
+
+    var loserIndex = losers.indexOf($('#challengers option:selected').text());
+    losers.splice(loserIndex, 1);
+    losers.push($('#challenged option:selected').text());
+
+    $('#challenge-div').hide();
+    $('#challenged').html('');
+    $('#challengers').html('');
+  });
+
+  $('#challenge-cancel').on('click', function() {
+    $('#challenge-div').hide();
+    $('#challenged').html('');
+    $('#challengers').html('');
   })
+
+  $('#export').on('click', function() {
+    $('img').hide();
+    $('.nav').hide();
+    $('#tournament-controls').hide();
+    $('.footer').hide();
+    $('#export').hide();
+    $('.challenge').hide();
+    $('.consolation').hide();
+    $('#tournament-details').css({
+      "position" : "fixed",
+      "top" : "0"
+    });
+    $('#winners').css({
+      "position" : "fixed",
+      "left" : "500px"
+    })
+
+    if (size == 16) {
+      $('#tournament-details').css("top", "-10px");
+      $('#winners').css("top", "-10px");
+    }
+    
+    $('#bracket4').css("margin-top", "290px");
+    $('#bracket8').css("margin-top", "290px");
+
+    window.print();
+
+    $('img').show();
+    $('.nav').show();
+    $('#tournament-controls').show();
+    $('.footer').show();
+    $('#export').show();
+    $('.challenge').show();
+    $('.consolation').show();
+    $('#tournament-details').css({
+      "position" : "absolute",
+      "top" : "100px"
+    });
+    $('#winners').css({
+      "position" : "absolute",
+      "right" : "20px",
+      "left" : "auto"
+    });
+
+    if (size == 16) {
+      $('#tournament-details').css("top", "100px");
+      $('#winners').css("top", "0");
+    }
+
+    $('#bracket4').css("margin-top", "150px");
+    $('#bracket8').css("margin-top", "40px");
+
+  });
 });

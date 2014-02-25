@@ -990,6 +990,10 @@ hr {
 	margin: 10px 0;
 }
 
+#begin {
+	background-color: #FFFF00;
+}
+
 #tournament-details {
 	position: absolute;
 	width: 440px;
@@ -1025,6 +1029,17 @@ hr {
 
 .round {
 	display: inline-block;
+}
+
+#challenge8 {
+	position: relative;
+	right: 470px;
+}
+
+#challenge16 {
+	position: relative;
+	left: 390px;
+	bottom: 690px;
 }
 
 .consolation {
@@ -1208,50 +1223,58 @@ hr {
 	display: none;
 	position: absolute;
 	top: 0;
-	right: 50px;
-	width: 300px;
-	list-style-type: none;
+	right: 20px;
+	width: 350px;
+	list-style-type: decimal;
+	text-align: center;
 }
 
 #winners li {
 	margin: 10px 0;
 	font-size: 16px;
 	line-height: 30px;
-	text-align: center;
+	text-align: left;
 }
 
 #winners p {
 	font-size: 18px;
-	font-weight: bolder;
-	font-style: italic;
+	font-weight: bold;
 	margin: 0;
 }
 
+#winners {
+	margin: auto;
+}
+
 #winners #p-first {
-	color: #00FF00;
-	text-shadow:
-      -1px -1px 0 #000,
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-      1px 1px 0 #000;
+	font-size: 22px;
+	font-weight: bolder;
 }
 
-#winners #p-second {
-	color: #102D5A;
-	/*text-shadow:
-      -1px -1px 0 #FFF,
-      1px -1px 0 #FFF,
-      -1px 1px 0 #FFF,
-      1px 1px 0 #FFF;*/
+#challenge-div {
+	display: none;
+	height: 210px;
+	width: 400px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin: -105px 0 0 -200px;
+	border: 2px solid black;
+	background: #C4C4C4;
 }
 
-#winners #p-third {
-	color: black;
-	/*text-shadow:
-      -1px -1px 0 #FFF,
-      1px -1px 0 #FFF,
-      -1px 1px 0 #FFF,
-      1px 1px 0 #FFF;*/
+#challenge-div h3 {
+	margin: 10px 10px;
+}
+
+#challenge-div select {
+	width: 350px;
+	margin: 10px;
+}
+
+#challenge-buttons {
+	margin-top: 10px;
+	text-align: center;
 }
 
 /*Firefox*/
