@@ -19,6 +19,11 @@ get '/consulting' do
 	erb :consulting
 end
 
+get '/training' do
+
+	erb :training
+end
+
 get '/guarantee' do
 
 	erb :guarantee

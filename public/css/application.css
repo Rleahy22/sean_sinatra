@@ -589,6 +589,26 @@ hr {
 	font-weight: bold;
 }
 
+/*Training*/
+
+#training-header {
+	margin: 20px;
+	width: 190px;
+}
+
+#training p {
+	margin: 10px 20px;
+	width: 650px;
+	color: #193165;
+	line-height: 25px;
+}
+
+#training h2 {
+	margin-left: 20px;
+	font-size: 20px;
+	font-style: italic;
+}
+
 /*Guarantee*/
 
 .guarantee-left {
