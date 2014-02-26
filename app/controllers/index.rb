@@ -9,9 +9,9 @@ get '/about' do
 	erb :about
 end
 
-get '/topics' do
+get '/speaks' do
 
-	erb :topics
+	erb :speaks
 end
 
 get '/guarantee' do

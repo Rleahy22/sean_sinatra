@@ -475,7 +475,7 @@ hr {
 }
 
 #you {
-	width: 115px;
+	width: 120px;
 	margin-left: 10px; 
 }
 
@@ -514,7 +514,7 @@ hr {
 }
 
 #topics-header {
-	width: 72px;
+	width: 225px;
 }
 
 .topics-sub {
@@ -525,8 +525,8 @@ hr {
 
 .subheading {
 	font-style: italic;
-	font-size: 10pt;
-	margin-bottom: 0;
+	font-size: 12pt;
+	margin-bottom: 5px;
 }
 
 .dynamic-p {
