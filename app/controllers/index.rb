@@ -14,6 +14,11 @@ get '/speaks' do
 	erb :speaks
 end
 
+get '/consulting' do
+
+	erb :consulting
+end
+
 get '/guarantee' do
 
 	erb :guarantee
