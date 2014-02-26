@@ -609,6 +609,35 @@ hr {
 	font-style: italic;
 }
 
+/*Why Hire Me?*/
+
+#why-hire {
+	padding-bottom: 5px;
+}
+
+#why-hire-header {
+	margin: 20px;
+	width: 245px;
+}
+
+#why-hire ol {
+	margin: 10px 20px 20px 20px;
+}
+
+.inner-ol {
+	margin-left: 10px;
+	list-style-type: lower-alpha;
+}
+
+.inner-ol li {
+	margin: 10px 0;
+	width: 600px;
+}
+
+#hire-link {
+	color: #1E90FF;
+}
+
 /*Guarantee*/
 
 .guarantee-left {

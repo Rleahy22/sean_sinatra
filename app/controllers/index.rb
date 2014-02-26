@@ -24,6 +24,11 @@ get '/training' do
 	erb :training
 end
 
+get '/why-hire' do
+
+	erb :why_hire
+end
+
 get '/guarantee' do
 
 	erb :guarantee
