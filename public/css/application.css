@@ -199,7 +199,7 @@ a {
 
 .main {
 	border-top: 2px solid #FFFFFF;
-	height: 785px;
+	height: 1000px;
 	width: 900px;
 	background: #194981
 }
@@ -1307,6 +1307,10 @@ hr {
 	font-size: 16px;
 }
 
+.idea:hover {
+	cursor: pointer;
+}
+
 #winners {
 	display: none;
 	position: absolute;
@@ -1339,13 +1343,16 @@ hr {
 	font-weight: bolder;
 }
 
-#challenge-div {
-	display: none;
-	height: 210px;
-	width: 400px;
+.popup {
 	position: fixed;
 	top: 50%;
 	left: 50%;
+	display: none;
+}
+
+#challenge-div {
+	height: 210px;
+	width: 400px;
 	margin: -105px 0 0 -200px;
 	border: 2px solid black;
 	background: #C4C4C4;
@@ -1365,6 +1372,31 @@ hr {
 	text-align: center;
 }
 
+#change-idea {
+	height: 170px;
+	width: 400px;
+	margin: -100px 0 0 -200px;
+	border: 2px solid black;
+	background: #C4C4C4;
+	text-align: center;
+}
+
+#change-idea h3 {
+	margin: 20px auto 10px auto;
+	width: 300px;
+	font-size: 20px;
+	text-align: center;
+}
+
+#change-idea input {
+	width: 350px;
+	margin: 10px auto;
+}
+
+#change-idea button {
+	font-size: 22px;
+	margin: 10px;
+}
 /*Firefox*/
 
 @-moz-document url-prefix(http://seanleahy.com/) {

@@ -59,6 +59,32 @@ $(document).ready(function() {
     }
   }
 
+  $('#tournament').on('click', '#idea-delete', function() {
+    if (seedLength = seeds.length) {
+      seeds.splice(seedIndex, 1);
+      currentEl.remove();
+      $('#change-idea').hide();
+      console.log(seeds);
+    }
+  });
+
+  $('#tournament').on('click', '#idea-update', function() {
+    newIdea = $('#new-idea').val();
+    seeds[seedIndex] = newIdea;
+    currentEl.html(newIdea);
+    $('#change-idea').hide();
+    console.log(seeds);
+  });
+
+  $('#tournament').on('click', '.idea', function() {
+    $('#change-idea').show();
+    currentEl = $(this);
+    currentIdea = $(this).html();
+    seedIndex = seeds.indexOf(currentIdea);
+    seedLength = seeds.length;
+    $('#new-idea').val(currentIdea);  
+  });
+
   function bracketNumber(numSeeds) {
     var colors = ['#102D5A', '#8B8F9B']
 
