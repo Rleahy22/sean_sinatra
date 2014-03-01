@@ -381,6 +381,13 @@ $(document).ready(function() {
 
     $('#bracket4').css("margin-top", "150px");
     $('#bracket8').css("margin-top", "40px");
-
   });
+
+  $('#service').on('mouseenter', function() {
+    $('#service-links').show();
+  });
+
+  $('#service-links').on('mouseleave', function() {
+    $(this).hide();
+  })
 });
