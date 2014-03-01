@@ -81,7 +81,7 @@ ul {
 }
 
 #service-links {
-	opacity: 0.9;
+	opacity: 0.92;
 	display: none;
 	width: 170px;
 	left: 50%;
@@ -96,6 +96,11 @@ ul {
 	display: block;
 	width: 160px;
 	padding: 10px 5px;
+}
+
+#service-links a {
+	padding-right: 160px;
+
 }
 
 #service-links li:hover {
