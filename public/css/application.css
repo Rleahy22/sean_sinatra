@@ -960,7 +960,6 @@ hr {
 #tournament {
 	margin: 10px;
 	height: 795px;
-	/*padding-bottom: 30px;*/
 	position: relative;
 }
 
@@ -971,6 +970,14 @@ hr {
 
 #tournament-controls div {
 	margin: 10px 0;
+}
+
+#instructions {
+	margin-left: 45px;
+	padding: 5px 10px;
+	border: 1px solid white;
+	background: #194981; 
+	text-decoration: underline;
 }
 
 #begin {
