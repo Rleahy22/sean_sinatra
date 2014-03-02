@@ -772,6 +772,14 @@ hr {
 
 /*Sales Shot*/
 
+.sales-div {
+	padding-bottom: 20px;
+}
+
+.sales-div p {
+	color: #043071;
+}
+
 #shot-header {
 	margin: 20px 0 0 20px;
 	width: 125px;
@@ -779,7 +787,7 @@ hr {
 
 .sales-left {
 	width: 365px;
-	margin: 20px 0 35px 10px;
+	margin: 20px 0 35px 20px;
 	display: inline-block;
 }
 
@@ -794,9 +802,33 @@ hr {
 }
 
 .sales-right {
-	width: 415px;
+	width: 370px;
 	float: right;
-	margin-right: 75px;
+	margin-right: 60px;
+}
+
+#signup-green {
+	margin: 0 0 20px 30px;
+}
+
+.sales-right a {
+	color: #5E5E5E;
+}
+
+#receive {
+	font-weight: bold;
+}
+
+.sales-right p {
+	font-size: 20px;
+}
+
+.sales-right a:hover {
+	color: black;
+}
+
+#amazon-right {
+	margin-left: 70px;
 }
 
 .sales-p {
@@ -815,9 +847,42 @@ hr {
 	text-decoration: underline;
 }
 
+.sales-review {
+	width: 300px;
+	margin-bottom: 30px;
+}
+
+.sales-review p {
+	margin: 5px 0;
+}
+
+#sales-review-left {
+	float: left;
+}
+
+#sales-review-right {
+	float: right;
+}
+
+#sales-review-right .sales-quote {
+	margin-bottom: 20px;
+}
+
+#sales-review-left .sales-quote {
+	margin-bottom: 40px
+}
+
+.sales-quote {
+	font-style: italic;
+}
+
+.sales-source {
+	font-weight: bold; 
+}
+
 #survey-div {
-	margin: 0 auto 20px auto;
-	width: 600px;
+	margin: 80px auto 20px auto;
+	width: 700px;
 }
 
 #survey {
