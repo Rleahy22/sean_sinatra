@@ -39,9 +39,9 @@ get '/video' do
 	erb :video
 end
 
-get '/handouts' do
+get '/tools' do
 
-	erb :handouts
+	erb :tools
 end
 
 get '/testimonials' do
