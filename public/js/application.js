@@ -7,6 +7,14 @@ $(document).ready(function() {
   var slide = {};
   var count = 0;
 
+  var isSafari = /constructor/i.test(window.HTMLElement);
+
+  if (isSafari) {
+    $('.nav-li').css({
+      "padding" : "15px 8px"
+    });
+  }
+
   function appendVideo(url) {
     var videoDiv = '<div class="player"><button id="close">X</button></div><iframe id="index-vid" width="700" height="394" src="' + url + '" frameborder="0" allowfullscreen></iframe>';
 
