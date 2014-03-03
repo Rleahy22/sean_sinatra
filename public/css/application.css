@@ -1350,9 +1350,8 @@ h3 {
 	}
 
 	#close {
-	padding: 0 10px;
-}
-
+		padding: 0 10px;
+	}
 
 	#you {
 		width: 125px;
@@ -1374,6 +1373,9 @@ h3 {
 		width: 115px;
 	}
 
+	#testimonials-header {
+		width: 155px;
+	}
 
 	#why-hire-header {
 		width: 270px;
@@ -1389,5 +1391,29 @@ h3 {
 
 	#contact-header {
 		width: 100px;
+	}
+
+	#tournament-controls input {
+		width: 190px;
+	}
+
+	#instructions {
+		margin-left: 30px;
+	}
+
+	#add {
+		padding: 0 2px;
+	}
+
+	#begin {
+		padding: 0 2px;
+	}
+
+	#company-header {
+		font-size: 20px;
+	}
+
+	#goal-header {
+		font-size: 18px;
 	}
 }
