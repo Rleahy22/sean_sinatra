@@ -74,6 +74,13 @@ ul {
   color: #FFFFFF;
 }
 
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  /* Safari only override */
+  ::i-block-chrome,.nav-li {
+  	padding: 15px 9px 15px 9px;
+  }
+}
+
 .bar {
 	color: #4b6888;
 	padding: 11px 0 10px 0;
