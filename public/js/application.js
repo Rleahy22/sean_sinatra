@@ -108,7 +108,7 @@ $(document).ready(function() {
       size = 16;
       $('#bracket4').remove();
       $('#bracket8').remove();
-      $('#tournament').css('height', '1460px');
+      $('#tournament').css('height', '1600px');
     }
 
     for (var i = 1; i < 17; i++) {
@@ -335,7 +335,7 @@ $(document).ready(function() {
   })
 
   $('#export').on('click', function() {
-    $('img').hide();
+    $('.header').hide();
     $('.nav').hide();
     $('#tournament-controls').hide();
     $('.footer').hide();
@@ -345,6 +345,11 @@ $(document).ready(function() {
     $('#tournament-details').css({
       "position" : "fixed",
       "top" : "0"
+    });
+    $('#trademark').css({
+      "position" : "fixed",
+      "bottom" : "-200px",
+      "margin-right" : "-600px"
     });
     $('#winners').css({
       "position" : "fixed",
@@ -371,6 +376,11 @@ $(document).ready(function() {
     $('#tournament-details').css({
       "position" : "absolute",
       "top" : "100px"
+    });
+    $('#trademark').css({
+      "position" : "absolute",
+      "bottom" : "10px",
+      "margin-right" : "-420px"
     });
     $('#winners').css({
       "position" : "absolute",

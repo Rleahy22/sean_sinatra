@@ -389,7 +389,7 @@ h3 {
 
 .abouts {
 	color: #193165;
-	font-size: 12pt;
+	font-size: 16px;
 	margin-bottom: 10px;
 	line-height: 22px;
 	margin: 0 0 0 10px;
@@ -435,7 +435,6 @@ h3 {
 	color: #193165;
 	font-size: 16px;
 	line-height: 22px;
-	font-weight: bold;
 }
 
 #superstars {
@@ -472,7 +471,6 @@ h3 {
 	color: #193165;
 	line-height: 22px;
 	font-size: 16px;
-	font-weight: bold;
 }
 
 #consulting h2 {
@@ -506,7 +504,6 @@ h3 {
 	color: #193165;
 	line-height: 25px;
 	font-size: 16px;
-	font-weight: bold;
 }
 
 #training h2 {
@@ -532,6 +529,11 @@ h3 {
 
 #why-hire ol {
 	margin: 10px 20px 20px 20px;
+}
+
+.hire-li {
+	color: black;
+	font-weight: bold;
 }
 
 .inner-ol {
@@ -1342,6 +1344,23 @@ h3 {
 #change-idea button {
 	font-size: 22px;
 	margin: 10px;
+}
+
+#trademark {
+	position: absolute;
+	bottom: 10px;
+	right: 50%;
+	margin-right: -420px; 
+}
+
+#trademark p {
+	font-size: 14px;
+	margin: 5px 0;
+}
+
+#tournament-logo {
+	width: 200px;
+	height: auto;
 }
 
 /*Firefox*/
