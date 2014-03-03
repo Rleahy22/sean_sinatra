@@ -1,4 +1,8 @@
 /*Layout*/
+@font-face {
+	font-family: Gotham;
+	src: url("gotham/gotham-book.otf");
+}
 
 body {
 	height: 100%;
@@ -11,7 +15,7 @@ body {
 .container {
 	width: 900px;
 	margin: auto;
-	border-left: 1px solid white;
+	/*border-left: 1px solid white;*/
 	box-shadow: 0 0 10px gray
 }
 
@@ -21,8 +25,7 @@ img {
 }
 
 .gif {
-	margin-top: -4px;
-	border-bottom: 2px solid #FFFFFF;
+	border-bottom: 20px solid #194981;
 }
 
 ul {
@@ -43,7 +46,7 @@ ul {
 
 .nav-li:first-child {
 	margin-left: 0.5px;
-	padding-left: 18px
+	padding-left: 14px
 }
 
 .nav-li:last-child {
@@ -58,14 +61,6 @@ ul {
   color: #FFFFFF;
 }
 
-.nav-link:hover {
-	background: -webkit-linear-gradient(bottom, #2e4f78, 	#9aacc2);
-	background: -moz-linear-gradient(top, #9aacc2, #2e4f78);
-	background: -ms-linear-gradient(top, #9aacc2, #2e4f78);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9aacc2', endColorstr='#2e4f78');
-	padding-bottom: 12px;
-}
-
 .bar {
 	color: #4b6888;
 	padding: 11px 0 10px 0;
@@ -76,8 +71,13 @@ ul {
 }
 
 .links {
+	font-family: Gotham;
   font-size: 14px;
   padding: 11px 0 16px 0;
+}
+
+.links:hover {
+	color: #808080;
 }
 
 #service-links {
@@ -88,6 +88,7 @@ ul {
 	margin-left: -280px;
 	padding: 0;
 	position: absolute;
+	top: 111px;
 	background: #5E5E5E;
 }
 
@@ -142,8 +143,9 @@ a {
 /*Index*/
 
 .main {
-	border-top: 2px solid #FFFFFF;
-	height: 1750px;
+	margin-top: -4px;
+	/*border-top: 2px solid #FFFFFF;*/
+	height: 850px;
 	width: 900px;
 	background: #e6e6e6;
 }
@@ -153,11 +155,11 @@ a {
 	width: 450px;
 }
 
-#index-video {
-	margin: 20px 0 0 20px;
+.index-video {
+	margin: 40px 0 0 20px;
 }
 
-#index-thumbnail {
+.index-thumbnail {
 	width: 400px;
 	height: 225px;
 }
@@ -171,7 +173,7 @@ h3 {
 .break {
 	background-color: #194981;
 	width: 2px;
-	height: 1650px;
+	height: 750px;
 	margin-top: 60px;
 	float: left;
 }
@@ -179,6 +181,10 @@ h3 {
 .index-right {
 	width: 446px;
 	float: right;
+}
+
+#gamechanging {
+	width: 400px;
 }
 
 #tips {
@@ -191,7 +197,7 @@ h3 {
 
 .quantity {
 	float: left;
-	width: 240px;
+	width: 200px;
 	margin: 0 0 10px 0;
 }
 
@@ -218,8 +224,8 @@ h3 {
 
 .buy-now {
 	float: left;
-	margin: 40px 10px 0 0;
-	width: 198px;
+	margin: 40px 10px 0 20px;
+	width: 170px;
 	text-align: center;
 }
 
@@ -370,6 +376,7 @@ hr {
 	background: -ms-linear-gradient(top, #1d4e88, #3b6fa9);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1d4e88', endColorstr='#3b6fa9');
 	font-size: 14pt;
+	border-radius: 2px;
 }
 
 #you {
@@ -378,7 +385,8 @@ hr {
 }
 
 #business-first {
-	width: 330px;
+	font-size: 12pt;
+	width: 350px;
 	color: #193165;
 	margin: 10px auto 10px auto;
 	font-style: italic;
@@ -386,9 +394,9 @@ hr {
 
 .abouts {
 	color: #193165;
-	font-size: 10pt;
+	font-size: 12pt;
 	margin-bottom: 10px;
-	line-height: 16px;
+	line-height: 22px;
 	margin: 0 0 0 10px;
 	padding: 5px 0;
 }

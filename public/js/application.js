@@ -5,8 +5,8 @@ $(document).ready(function() {
   var losers = [];
   var challengees = [];
 
-  function appendVideo() {
-    var videoDiv = '<div class="player"><button id="close">X</button></div><iframe id="index-vid" width="700" height="394" src="//www.youtube.com/embed/PCy4f99hxEc?autoplay=1" frameborder="0" allowfullscreen></iframe>';
+  function appendVideo(url) {
+    var videoDiv = '<div class="player"><button id="close">X</button></div><iframe id="index-vid" width="700" height="394" src="' + url + '" frameborder="0" allowfullscreen></iframe>';
 
     $('body').append('<div class="opaque"></div>');
     $('body').append(videoDiv);
@@ -22,8 +22,12 @@ $(document).ready(function() {
     $('#index-vid').remove();
   }
 
-  $("#index-video").click(function() {
-    appendVideo();
+  $("#video1").click(function() {
+    appendVideo("#");
+  });
+
+  $("#video2").click(function() {
+    appendVideo("//www.youtube.com/embed/PCy4f99hxEc?autoplay=1");
   });
 
   $('body').on('click', '#close', function(){
