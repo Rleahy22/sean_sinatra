@@ -40,31 +40,29 @@
         <li class="nav-li nav-link"><a href="/contact" class="links-main">CONTACT</a></li>
       </ul>
     </div>
-    <% if @main %>
-      <div class="carousel-wrapper">
-        <ul class="carousel">
-          <li class="carousel-li">
-            <a href="/testimonials"><img src="images/testimonials_01.png"></a>
-          </li>
-          <li class="carousel-li">
-            <a href="/testimonials"><img src="images/testimonial001.jpg"></a>
-          </li>
-          <li class="carousel-li">
-            <a href="/testimonials"><img src="images/herold_testimonial2.jpg"></a>
-          </li>
-          <li class="carousel-li">
-            <a href="/testimonials"><img src="images/testimonial_00.png"></a>
-          </li>
-        </ul>
-      </div>
-    <% end %>
     <div id="service-links">
       <li><a href="/speaking" class="links">SPEAKING</a></li>
       <li><a href="/training" class="links">TRAINING</a></li>
       <li><a href="/consulting" class="links">CONSULTING</a></li>
     </div>
-    <%= yield %>
-    <div class="footer">
+		<div class="dynamic-div">
+			<div class="contact-div">
+				<h1 class="dynamic-header" id="contact-header">CONTACT</h1>
+				<div class="contact-content">
+					<div class="contact-info">
+						<p>Phone <span class="specific">847-922-2181</span></p>
+						<p>Email <a href="mailto: sean@seanleahy.com" id="email-sean">sean@seanleahy.com</a></p>
+					</div>
+					<p>My sales training programs work! Your sales team will not only leave motivated, they will leave with specific tools they can use right away. I have developed a very affordable pricing schedule that will deliver a return on your investment if just one of your salespeople sells more. And I guarantee much more than that.</p>
+					<p>Call or e-mail me to discuss your upcoming meeting. </p>
+					<div class="contact-info">
+						<p>Phone <span class="specific">847-922-2181</span></p>
+						<p>Email <a href="mailto: sean@seanleahy.com" id="email-sean">sean@seanleahy.com</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
       <p id="footer-p">Copyright &copy; 2013, Sean Leahy, LLC <span id="contact">(847) 922-2181<span class="vert-bar">|</span><a href="mailto:sean@seanleahy.com">Sean@SeanLeahy.com</a><span class="vert-bar">|</span><a href="http://www.seanleahy.com">www.SeanLeahy.com</a></span></p>
     </div>
   </div>

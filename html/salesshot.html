@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- 
+    normalize.css removes cross-browser differences in defaults, e.g.,
+    differences in how form elements appear between Firefox and IE
+    See: http://necolas.github.com/normalize.css/
+  -->
+  <link rel="stylesheet" href="/css/normalize.css">
+  <!--
+    application.css is where you put your styles
+  -->
+  <!--[if !IE]><!-->
+  <link rel="stylesheet" href="/css/application.css">
+  <!--<![endif]-->
+
+  <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="/css/ie-only.css" />
+  <![endif]-->
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+  <script src="/js/application.js"></script>
+
+  <title>Sean Leahy Speaks</title>
+</head>
+<body>
+  <div class="container">
+    <img src="images/header.png" class="header">
+    <div class="nav">
+      <ul>
+        <li class="nav-li nav-link"><a href="/" class="links-main">HOME</a></li>
+        <li class="nav-li nav-link"><a href="/about" class="links-main">ABOUT YOU</a></li>
+        <li class="nav-li nav-link"><a href="#" class="links-main" id="service">MY SERVICES</a></li>
+        <li class="nav-li nav-link"><a href="/testimonials" class="links-main">TESTIMONIALS</a></li>
+        <li class="nav-li nav-link"><a href="/why_hire" class="links-main">WHY HIRE ME?</a></li>
+        <li class="nav-li nav-link"><a href="/tools" class="links-main">FREE TOOLS</a></li>
+        <li class="nav-li nav-link"><a href="/salesshot" class="links-main">SALES SHOT</a></li>
+        <li class="nav-li nav-link"><a href="/contact" class="links-main">CONTACT</a></li>
+      </ul>
+    </div>
+    <div id="service-links">
+      <li><a href="/speaking" class="links">SPEAKING</a></li>
+      <li><a href="/training" class="links">TRAINING</a></li>
+      <li><a href="/consulting" class="links">CONSULTING</a></li>
+    </div>
+		<div class="dynamic-div">
+			<div class="sales-div">
+				<h1 class="dynamic-header" id="shot-header">SALES SHOT</h1>
+				<div class="sales-left">
+					<img src="images/ssbookalternate.png" id="sales-book">
+					<div id="order-buttons">
+						<a href="http://www.amazon.com/The-Sales-Shot-Paced-Hitting/dp/1477148248/ref=sr_1_1?ie=UTF8&qid=1362522800&sr=8-1&keywords=leahy+sales+shot" target="_blank"><img src="images/amazon.png" id="amazon" class="order-links"></a>
+						<a href="http://www.barnesandnoble.com/w/the-sales-shot-sean-p-leahy/1114703213?ean=9781477148259" target="_blank"><img src="images/bnn.png" id="barnes" class="order-links"></a>
+					</div>
+				</div>
+				<div class="sales-right">
+					<a href="http://visitor.r20.constantcontact.com/manage/optin/ea?v=001UWUIXldX9aj3rQGEmOxzOFOQgj9z30MNmqJl6Z-tbnQt5ik6iwFvpWD7M2eQ6lozNjxClhOfqG-k2br1hbL_aQ%3D%3D" target="_blank"><img src="images/signup2.jpg" id="signup-green"></a>
+					<p id="receive">Receive the Sales Shot one of two ways:</p>
+					<p>Free every week via e-mail by <a href="http://visitor.r20.constantcontact.com/manage/optin/ea?v=001UWUIXldX9aj3rQGEmOxzOFOQgj9z30MNmqJl6Z-tbnQt5ik6iwFvpWD7M2eQ6lozNjxClhOfqG-k2br1hbL_aQ%3D%3D" target="_blank">clicking here</a> to sign up.</p>
+					<p>Or get them all at once by buying the book.</p>
+					<a href="http://www.amazon.com/The-Sales-Shot-Paced-Hitting/dp/1477148248/ref=sr_1_1?ie=UTF8&qid=1362522800&sr=8-1&keywords=leahy+sales+shot" target="_blank" id="amazon-right"><img src="images/amazon.png" id="amazon" class="order-links"></a>
+				</div>
+				<div id="survey-div">
+					<div class="sales-review" id="sales-review-left">
+						<p class="sales-quote">"I can't tell you how much your Sales Shot helps me. I really appreciate it."</p>
+						<p class="sales-source">James Thurman</p>
+						<p class="sales-source">Lewis Marketing</p>
+					</div>
+					<div class="sales-review" id="sales-review-right">
+						<p class="sales-quote">"The Sales Shots are great! I often use their messages in my training of our insurance agents."</p>
+						<p class="sales-source">Dan Hickey</p>
+						<p class="sales-source">Allstate Insurance Company</p>
+					</div>
+					<img src="images/Sales Shot Survey Image.png" id="survey">
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+      <p id="footer-p">Copyright &copy; 2013, Sean Leahy, LLC <span id="contact">(847) 922-2181<span class="vert-bar">|</span><a href="mailto:sean@seanleahy.com">Sean@SeanLeahy.com</a><span class="vert-bar">|</span><a href="http://www.seanleahy.com">www.SeanLeahy.com</a></span></p>
+    </div>
+  </div>
+</body>
+</html>

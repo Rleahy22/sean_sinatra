@@ -40,30 +40,22 @@
         <li class="nav-li nav-link"><a href="/contact" class="links-main">CONTACT</a></li>
       </ul>
     </div>
-    <% if @main %>
-      <div class="carousel-wrapper">
-        <ul class="carousel">
-          <li class="carousel-li">
-            <a href="/testimonials"><img src="images/testimonials_01.png"></a>
-          </li>
-          <li class="carousel-li">
-            <a href="/testimonials"><img src="images/testimonial001.jpg"></a>
-          </li>
-          <li class="carousel-li">
-            <a href="/testimonials"><img src="images/herold_testimonial2.jpg"></a>
-          </li>
-          <li class="carousel-li">
-            <a href="/testimonials"><img src="images/testimonial_00.png"></a>
-          </li>
-        </ul>
-      </div>
-    <% end %>
     <div id="service-links">
       <li><a href="/speaking" class="links">SPEAKING</a></li>
       <li><a href="/training" class="links">TRAINING</a></li>
       <li><a href="/consulting" class="links">CONSULTING</a></li>
     </div>
-    <%= yield %>
+    <div class="dynamic-div">
+    	<div class="signup-page-div">
+    		<h1 class="dynamic-header" id="signup-header">SIGN UP</h1>
+    		<p id="signup-p">Click on the link below to sign up for Sean's Sales Shot. Every week or two you will receive a pertinent sales tip that is short and to the point. </p>
+    		<div class="signup-div">
+    			<a href="http://visitor.r20.constantcontact.com/manage/optin/ea?v=001UWUIXldX9aj3rQGEmOxzOFOQgj9z30MNmqJl6Z-tbnQt5ik6iwFvpWD7M2eQ6lozcMk7CjysCQ-AVO13molfBw%3D%3D" id="signup-last">Sign up for the Sales Shot</a>
+    			<img src="https://imgssl.constantcontact.com/ui/images1/safe_subscribe_logo.gif" id="safesubcribe">
+    			<p id="signup-bottom">For <a href="http://www.constantcontact.com/jmml/email-marketing.jsp" target="_blank" id="marketing">Email Marketing</a> you can trust</p>
+    		</div>
+    	</div>
+    </div>
     <div class="footer">
       <p id="footer-p">Copyright &copy; 2013, Sean Leahy, LLC <span id="contact">(847) 922-2181<span class="vert-bar">|</span><a href="mailto:sean@seanleahy.com">Sean@SeanLeahy.com</a><span class="vert-bar">|</span><a href="http://www.seanleahy.com">www.SeanLeahy.com</a></span></p>
     </div>

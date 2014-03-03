@@ -40,31 +40,36 @@
         <li class="nav-li nav-link"><a href="/contact" class="links-main">CONTACT</a></li>
       </ul>
     </div>
-    <% if @main %>
-      <div class="carousel-wrapper">
-        <ul class="carousel">
-          <li class="carousel-li">
-            <a href="/testimonials"><img src="images/testimonials_01.png"></a>
-          </li>
-          <li class="carousel-li">
-            <a href="/testimonials"><img src="images/testimonial001.jpg"></a>
-          </li>
-          <li class="carousel-li">
-            <a href="/testimonials"><img src="images/herold_testimonial2.jpg"></a>
-          </li>
-          <li class="carousel-li">
-            <a href="/testimonials"><img src="images/testimonial_00.png"></a>
-          </li>
-        </ul>
-      </div>
-    <% end %>
     <div id="service-links">
       <li><a href="/speaking" class="links">SPEAKING</a></li>
       <li><a href="/training" class="links">TRAINING</a></li>
       <li><a href="/consulting" class="links">CONSULTING</a></li>
     </div>
-    <%= yield %>
-    <div class="footer">
+		<div class="dynamic-div">
+			<div class="checklist-left">
+				<h2 id="checklist-header">Sales Checklist</h2>
+				<img src="images/SeanLeahy_negotiation.jpg" id="checklist-image">
+			</div>
+			<div class="checklist-right">
+				<p id="checklist-p">Because pilots do the very same safety checks every time they fly, they use a checklist to make sure they don't miss a step. After performing the same steps thousands of times you would think they would remember what to do without a checklist...wouldn't you?</p>
+				<p id="checklist-p">Well, no! Because they do it over and over again, that is exactly the reason they need a checklist.</p>
+				<p id="checklist-p">Checklists are also excellent tools for the veteran salesperson.</p>
+				<h3 id="includes">Includes:</h3>
+				<ul id="checklists">
+					<li>Sales Question Checklist</li>
+					<li>Negotiation Checklist</li>
+					<li>Sales Call Checklist</li>
+					<li>Upper Management Checklist</li>
+					<li>Powerpoint Checklist</li>
+				</ul>
+				<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" id="paypal-cart">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="ME2F6EDMEAVHG">
+					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" name="submit" alt="PayPal - the safer, easier way to pay online!">
+				</form>
+			</div>
+		</div>
+		<div class="footer">
       <p id="footer-p">Copyright &copy; 2013, Sean Leahy, LLC <span id="contact">(847) 922-2181<span class="vert-bar">|</span><a href="mailto:sean@seanleahy.com">Sean@SeanLeahy.com</a><span class="vert-bar">|</span><a href="http://www.seanleahy.com">www.SeanLeahy.com</a></span></p>
     </div>
   </div>

@@ -24,7 +24,7 @@ get '/training' do
 	erb :training
 end
 
-get '/why-hire' do
+get '/why_hire' do
 
 	erb :why_hire
 end
