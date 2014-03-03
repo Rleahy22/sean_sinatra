@@ -15,7 +15,6 @@ body {
 .container {
 	width: 900px;
 	margin: auto;
-	/*border-left: 1px solid white;*/
 	box-shadow: 0 0 10px gray
 }
 
@@ -56,7 +55,7 @@ ul {
 .nav-li {
   list-style: none;
   display: inline-block;
-  padding: 10px 13px 15px 13px;
+  padding: 15px 13px 15px 13px;
   margin: -3px;
   color: #FFFFFF;
 }
@@ -304,9 +303,8 @@ h3 {
 #close {
 	position: fixed;
 	top: 20%;
-	left: 0;
-	right: 0;
-	margin: auto;
+	left: 50%;
+	margin-left: 375px;
 	padding-right: 16px;
 	width: 20px;
 }
@@ -1342,144 +1340,54 @@ h3 {
 }
 /*Firefox*/
 
-@-moz-document url-prefix(http://seanleahy.com/) {
-  
-	/*Layout*/
-
-  .links {
-     font-size: 12px;
-  }
-  .nav-li {
-  	margin: -2px;
-  }
-  .nav-li:first-child {
-		margin-left: 0.5px;
-		padding-left: 20px
-	}
-	.nav-li:last-child {
-		padding-right: 23px
-	}
-	.alt-links {
-		font-size: 12px;
-	}
-	.alt-nav-li {
-  	padding: 10px 16px 15px 16px;
-  	margin: 0 -11px -2px -11px;
-	}
-  .alt-nav-li:first-child {
-  	padding-left: 23px;
-	}
-	.alt-nav-li:last-child {
-		padding-right: 23px
+@-moz-document url-prefix(http://localhost:9393/) {
+	.nav-li {
+	  list-style: none;
+	  display: inline-block;
+	  padding: 15px 8px 15px 8px;
+	  margin: -3px;
+	  color: #FFFFFF;
 	}
 
-	/*Index*/
+	#close {
+	padding: 0 10px;
+}
 
-	#tips {
-		font-size: 16px
-	}
-	.review-source {
-		font-size: 12px
-	}
-	.bulk {
-		font-size: 15px
-	}
-	#inquire {
-		font-size: 12px
-	}
-
-	/*About You*/
 
 	#you {
-		font-size: 18px;
-		font-family: Arial;
+		width: 125px;
 	}
-	.abouts {
-		font-size: 13px;
-		font-family: Arial;
-	}
+
 	#business-first {
-		font-family: Arial;
-		font-size: 12px
-	}
-	#about-div {
-		padding-bottom: 50px;
+		width: 420px;
 	}
 
-	.dynamic-header {
-		font-size: 17px;
+	#topics-header {
+		width: 245px;
 	}
 
-	/*Topics*/
-
-	.subheading {
-		font-size: 12px;
-	}
-	.topics-sub {
-		font-size: 12px;
-	}
-	.dynamic-p {
-		font-size: 12px;
+	#training-header {
+		width: 210px;
 	}
 
-	/*Guarantee*/
-
-	#guarantee-header {
-		width: 394px;
-	}
-	.guarantee-left {
-		margin-bottom: 535px;
+	#consulting-header {
+		width: 115px;
 	}
 
-	/*Video*/
 
-	#not-playing {
-		font-size: 10px;
+	#why-hire-header {
+		width: 270px;
+	}
+
+	#handouts-header {
 		width: 120px;
 	}
-	#help {
-		font-size: 10px
+
+	#shot-header {
+		width: 135px;
 	}
 
-	/*Handouts*/
-
-	/*Testimonials*/
-
-	#testimonials-header {
-		width: 140px;
-	}
-
-	.testimonial {
-		font-size: 12px;
-	}
-
-	/*Sales Shot*/
-
-	.sales-p {
-		font-size: 12px;
-	}
-	.sales-bold {
-		font-size: 15px
-	}
-	.sales-regular {
-		font-size: 15px
-	}
-	.signup-link {
-		font-size: 14px;
-	}
-	#bottom-signup {
-		width: 350px
-	}
-
-	/*Signup*/
-
-	#signup-header {
-		width: 80px;
-	}
-	#signup-p {
-		font-size: 12px
-	}
-	#signup-bottom {
-		font-size: 10px
+	#contact-header {
+		width: 100px;
 	}
 }

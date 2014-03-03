@@ -11,9 +11,9 @@ $(document).ready(function() {
     $('body').append('<div class="opaque"></div>');
     $('body').append(videoDiv);
 
-    $( "#close" ).animate({ left: "+=800" }, 1, function() {
-      return;
-    });
+    // $( "#close" ).animate({ left: "+=800" }, 1, function() {
+    //   return;
+    // });
   }
 
   function removeVideo() {
