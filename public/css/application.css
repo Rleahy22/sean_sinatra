@@ -23,8 +23,22 @@ img {
 	margin-bottom: 0;
 }
 
-.gif {
+.carousel-wrapper {
 	border-bottom: 20px solid #194981;
+	width: 900px;
+	overflow: hidden;
+	position: relative;
+	height: 300px;
+}
+
+.carousel {
+	width: 3600px;
+	list-style-type: none;
+	position: absolute;
+}
+
+.carousel-li {
+	float: left;
 }
 
 ul {

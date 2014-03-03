@@ -4,16 +4,14 @@ $(document).ready(function() {
   var size = {};
   var losers = [];
   var challengees = [];
+  var slide = {};
+  var count = 0;
 
   function appendVideo(url) {
     var videoDiv = '<div class="player"><button id="close">X</button></div><iframe id="index-vid" width="700" height="394" src="' + url + '" frameborder="0" allowfullscreen></iframe>';
 
     $('body').append('<div class="opaque"></div>');
     $('body').append(videoDiv);
-
-    // $( "#close" ).animate({ left: "+=800" }, 1, function() {
-    //   return;
-    // });
   }
 
   function removeVideo() {
@@ -22,8 +20,22 @@ $(document).ready(function() {
     $('#index-vid').remove();
   }
 
+  var slide = setInterval(function() {
+    if (count < 3) {
+      $('.carousel').animate({
+        left: '-=' + 900
+      }, 600, 'linear');
+      count++;
+    } else {
+      count = 0;
+      $('.carousel').animate({
+        left: '+=' + 2700
+      }, 0, 'linear');
+    }
+  }, 4000);
+
   $("#video1").click(function() {
-    appendVideo("#");
+    appendVideo("//www.youtube.com/embed/bx6tdDMptz8?autoplay=1");
   });
 
   $("#video2").click(function() {
