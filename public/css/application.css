@@ -70,13 +70,13 @@ ul {
   font-family: "Times New Roman", Times, Serif;
 }
 
-.links {
+.links-main {
 	font-family: Gotham;
   font-size: 14px;
   padding: 11px 0 16px 0;
 }
 
-.links:hover {
+.links-main:hover {
 	color: #808080;
 }
 
@@ -109,6 +109,7 @@ ul {
 	background: -moz-linear-gradient(top, #9aacc2, #2e4f78);
 	background: -ms-linear-gradient(top, #9aacc2, #2e4f78);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9aacc2', endColorstr='#2e4f78');
+	color: white;
 }
 
 a {
@@ -144,7 +145,7 @@ a {
 
 .main {
 	margin-top: -4px;
-	/*border-top: 2px solid #FFFFFF;*/
+	border-top: 1px solid #FFFFFF;
 	height: 850px;
 	width: 900px;
 	background: #e6e6e6;
@@ -257,14 +258,6 @@ h3 {
 	text-align: center;
 }
 
-hr {
-	margin: 50px auto;
-	width: 410px;
-	height: 1px;
-	background-color: white;
-}
-
-
 #checklist {
 	margin: 10px 0 0 0;
 }
@@ -376,7 +369,7 @@ hr {
 	background: -ms-linear-gradient(top, #1d4e88, #3b6fa9);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1d4e88', endColorstr='#3b6fa9');
 	font-size: 14pt;
-	border-radius: 2px;
+	border-radius: 5px;
 }
 
 #you {
@@ -402,10 +395,10 @@ hr {
 }
 
 #dad-jacket {
-	width: 154px;
-	height: 159px;
+	width: 250px;
+	height: auto;
 	float: right;
-	margin: 85px 115px 0 0;
+	margin: 85px 20px 0 10;
 	border: 1px solid white;
 	box-shadow: 0 0 10px gray;
 }
@@ -415,7 +408,7 @@ hr {
 .topics-left {
 	width: 550px;
 	margin: 8px 0 30px 20px;
-	padding-bottom: 190px;
+	padding-bottom: 50px;
 	display: inline-block;
 }
 
@@ -438,7 +431,8 @@ hr {
 .dynamic-p {
 	margin-top: 0;
 	color: #193165;
-	font-size: 10pt;
+	font-size: 16px;
+	line-height: 22px;
 	font-weight: bold;
 }
 
@@ -474,7 +468,9 @@ hr {
 	margin: 10px 20px;
 	width: 650px;
 	color: #193165;
-	line-height: 25px;
+	line-height: 22px;
+	font-size: 16px;
+	font-weight: bold;
 }
 
 #consulting h2 {
@@ -507,6 +503,8 @@ hr {
 	width: 650px;
 	color: #193165;
 	line-height: 25px;
+	font-size: 16px;
+	font-weight: bold;
 }
 
 #training h2 {
@@ -519,6 +517,10 @@ hr {
 
 #why-hire {
 	padding-bottom: 5px;
+	color: #193165;
+	line-height: 22px;
+	font-size: 16px;
+	font-weight: bold;
 }
 
 #why-hire-header {
@@ -542,45 +544,6 @@ hr {
 
 #hire-link {
 	color: #1E90FF;
-}
-
-/*Guarantee*/
-
-.guarantee-left {
-	margin: 8px 0 545px 20px;
-	width: 550px;
-	display: inline-block;
-}
-
-#guarantee-header {
-	width: 390px;
-	margin-bottom: 25px
-}
-
-.guarantee-pic {
-	width: 200px;
-	float: right;
-	margin: 80px 95px 0 0;
-}
-
-/*Video*/
-
-.video-div {
-	margin: 8px 0 330px 20px;
-}
-
-#video-header {
-	width: 60px;
-}
-
-#video {
-	width: 700px;
-	margin: 50px auto;
-}
-
-#thumbnail {
-	width: 700px;
-	height: 394px;
 }
 
 /*Handouts*/
@@ -665,7 +628,7 @@ hr {
 .testimonial {
 	color: #043071;
 	font-weight: bold;
-	font-size: 10pt;
+	font-size: 14px;
 	margin-bottom: 50px;
 }
 
@@ -709,6 +672,7 @@ hr {
 
 .testimonial-p {
 	margin: 0;
+	line-height: 20px;
 }
 
 .block {
@@ -736,10 +700,11 @@ hr {
 .contact-content {
 	width: 570px;
 	margin-left: 160px;
-	font-size: 12pt;
+	color: #193165;
+	line-height: 22px;
+	font-size: 16px;
 	font-weight: bold;
-	font-family:"Times New Roman", Georgia, Serif;
-	padding-bottom: 475px;
+	padding-bottom: 405px;
 }	
 
 #contact-header {
@@ -795,7 +760,7 @@ hr {
 
 .sales-left {
 	width: 365px;
-	margin: 20px 0 35px 20px;
+	margin: 40px 0 35px 40px;
 	display: inline-block;
 }
 
@@ -836,7 +801,7 @@ hr {
 }
 
 #amazon-right {
-	margin-left: 70px;
+	margin-left: 90px;
 }
 
 .sales-p {
