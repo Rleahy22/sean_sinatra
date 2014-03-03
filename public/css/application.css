@@ -140,6 +140,10 @@ a {
 	font-size: 8pt;
 }
 
+.vert-bar {
+	margin: 0 5px;
+}
+
 /*Index*/
 
 .main {
@@ -858,6 +862,7 @@ h3 {
 
 #survey {
 	width: 600px;
+	margin-left: 50px;
 }
 
 #sales-break {
