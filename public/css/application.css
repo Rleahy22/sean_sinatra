@@ -182,7 +182,7 @@ a {
 }
 
 .index-video {
-	margin: 40px 0 0 20px;
+	margin: 20px 0 0 20px;
 }
 
 .index-thumbnail {
@@ -343,6 +343,14 @@ h3 {
 	margin: auto;
 	z-index: 3;
 	opacity: 1.8;
+}
+
+.video-header {
+	width: 300px;
+	margin: 5px auto 5px auto;
+	text-align: center;
+	font-size: 20px;
+	color: #194981;
 }
 
 #inner-right {
@@ -547,6 +555,15 @@ h3 {
 #why-hire-header {
 	margin: 20px;
 	width: 245px;
+}
+
+#why_hire_image {
+	width: 860px;
+	margin-left: 20px;
+}
+
+#other-reasons {
+	margin-left: 20px;
 }
 
 #why-hire ol {
