@@ -29,7 +29,7 @@ $(document).ready(function() {
   }
 
   var slide = setInterval(function() {
-    if (count < 3) {
+    if (count < 5) {
       $('.carousel').animate({
         left: '-=' + 900
       }, 600, 'linear');
@@ -37,13 +37,13 @@ $(document).ready(function() {
     } else {
       count = 0;
       $('.carousel').animate({
-        left: '+=' + 2700
+        left: '+=' + 4500
       }, 0, 'linear');
     }
   }, 4000);
 
   $("#video1").click(function() {
-    appendVideo("//www.youtube.com/embed/bx6tdDMptz8?autoplay=1");
+    appendVideo("//www.youtube.com/embed/_U_zZoxSfuA?autoplay=1");
   });
 
   $("#video2").click(function() {

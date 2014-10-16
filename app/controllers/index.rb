@@ -74,6 +74,11 @@ get '/tournament' do
 	erb :tournament
 end
 
+get '/datagility' do
+
+	erb :datagility
+end
+
 not_found do
 	
 	erb :fourofour

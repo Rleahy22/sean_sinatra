@@ -1,0 +1,130 @@
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script src="/js/datagility.js"></script>
+<div ng-app="datagility">
+    <div class="datagility" ng-controller="datagilityCtrl">
+        <div id="datagility-left">
+            <div class="input-div">
+                <label>Sales</label>
+                <input class="input-box" type="number" id="sales" ng-model="inputs.sales" autofocus="autofocus">
+            </div>
+            <div class="input-div">
+                <label>Average Order Size $ (Mfg)</label>
+                <input class="input-box" type="number" id="averageOrderMfg" ng-model="inputs.mfgAverageOrder">
+            </div>
+            <div class="input-div">
+                <label>Average Order Size $ (Cust)</label>
+                <input class="input-box" type="number" id="averageOrderCust" ng-model="inputs.custAverageOrder">
+            </div>
+            <div class="input-div">
+                <label>Gross Margin %</label>
+                <input class="input-box" type="number" id="grossMargin"ng-model="inputs.grossMargin">
+            </div>
+            <div class="input-div">
+                <label>Estimated Sales increase %</label>
+                <input class="input-box" type="number" id="salesIncreaseEst" ng-model="inputs.estimatedSalesInc">
+            </div>
+            <div class="input-div">
+                <label>% of orders with errors (Mfg)</label>
+                <input class="input-box" type="number" id="orderErrorsMfg" ng-model="inputs.mfgOrderErrors">
+            </div>
+            <div class="input-div">
+                <label>% of orders with errors (Cust)</label>
+                <input class="input-box" type="number" id="orderErrorsCust" ng-model="inputs.custOrderErrors">
+            </div>
+            <div class="input-div">
+                <label>Cost to fix order with error (Mfg)</label>
+                <input class="input-box" type="number" id="costErrorMfg" ng-model="inputs.mfgErrorCost">
+            </div>
+            <div class="input-div">
+                <label>Cost to fix order with error (Cust)</label>
+                <input class="input-box" type="number" id="costErrorCust" ng-model="inputs.custErrorCost">
+            </div>
+            <h2>Error reductions savings %</h2>
+            <div class="input-div">
+                <label>Manufacturer</label>
+                <input class="input-box" type="number" id="errorSavingsMfg" ng-model="inputs.mfgErrorSavings">
+            </div>
+            <div class="input-div">
+                <label>Customer</label>
+                <input class="input-box" type="number" id="errorSavingsCust" ng-model="inputs.custErrorSavings">
+            </div>
+            <div class="input-div">
+                <label>Desired ROI</label>
+                <input class="input-box" type="number" id="desiredRoi" ng-model="inputs.desiredRoi">
+            </div>
+            <div class="input-div">
+                <label>Desired Payback</label>
+            </div>
+        </div>
+        <div id="datagility-right">
+            <div class="output-div" ng-show="outputs.salesProjection">
+                <label>Sales Inc.</label>
+                <p>{{outputs.salesProjection | currency:"$":0}}</p>
+            </div>
+            <div class="output-div">
+                <label>GM Increase</label>
+                <p>{{outputs.gmIncrease | currency:"$":0}}</p>
+            </div>
+            <div class="output-div">
+                <label>With Errors</label>
+                <p>{{outputs.mfgErrorsAfter | number:0}}</p>
+            </div>
+            <div class="output-div">
+                <label>Cost of Errors</label>
+                <p>{{outputs.mfgCostErrorsAfter | currency:"$":0}}</p>
+            </div>
+            <div class="output-div">
+                <label>with Errors</label>
+                <p>{{outputs.custErrorsAfter | number:0}}</p>
+            </div>
+            <div class="output-div">
+                <label>Cost of Errors</label>
+                <p>{{outputs.custCostErrorsAfter | currency:"$":0}}</p>
+            </div>
+            <div class="output-div">
+                <label>Mfg Savings</label>
+                <p>{{outputs.mfgSavings | currency:"$":0}}</p>
+            </div>
+            <div class="output-div">
+                <label>Cust Savings</label>
+                <p>{{outputs.custSavings | currency:"$":0}}</p>
+            </div>
+            <div class="output-div">
+                <label>Total Savings</label>
+                <p>{{outputs.totalSavings | currency:"$":0}}</p>
+            </div>
+            <div class="output-div">
+                <label>Total Benefit</label>
+                <p>{{outputs.totalBenefit | currency:"$":0}}</p>
+            </div>
+            <div class="output-div" ng-show="inputs.desiredRoi">
+                <label>Desired ROI</label>
+                <p>{{inputs.desiredRoi | number:0}}%</p>
+            </div>
+            <div class="output-div">
+                <label>Fee (Calculated)</label>
+                <p>{{outputs.feeCalculated | currency:"$":0}}</p>
+            </div>
+            <div class="output-div">
+                <label>Payback</label>
+                <p>{{outputs.payback | number:2}}</p>
+            </div>
+            <div class="output-div">
+                <label>Total $ Benefit</label>
+                <p>{{outputs.totalBenefit | currency:"$":0}}</p>
+            </div>
+            <div class="output-div">
+                <label>Fee</label>
+                <p>{{outputs.fee | currency:"$":0}}</p>
+            </div>
+            <div class="output-div">
+                <label>ROI (Calculated)</label>
+                <p>{{outputs.roiAfter | number:0}}%</p>
+            </div>
+            <div class="output-div">
+                <label></label>
+                <p>{{outputs.paybackAfter | number:2}}</p>
+            </div>
+        </div>
+    </div>
+</div>

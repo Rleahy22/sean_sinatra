@@ -32,7 +32,7 @@ img {
 }
 
 .carousel {
-	width: 3600px;
+	width: 5400px;
 	list-style-type: none;
 	position: absolute;
 }
@@ -1402,13 +1402,53 @@ h3 {
 	height: auto;
 }
 
+/*Datagility*/
+
+.datagility {
+	padding: 5px 10px;
+}
+
+.datagility #datagility-left {
+	width: 250px;
+	display: inline-block;
+}
+
+.datagility #datagility-right {
+	width: 500px;
+	float: right;
+}
+
+.datagility .error {
+	border: 1px solid red;
+}
+
+.datagility .input-div {
+	width: 250px;
+	padding: 5px 0;
+	margin: 5px 0;
+	border: 2px solid black;
+	border-radius: 2px;
+	box-shadow: 2px 2px 2px #696969;
+}
+
+.datagility label {
+	display: block;
+	padding-left: 2px;
+}
+
+.datagility .input-box {
+	width: 200px;
+	margin: 1px 2px;
+	border: 1px solid #696969;
+}
+
 /*Firefox*/
 
 @-moz-document url-prefix(http://seanleahy.com/) {
 	.nav-li {
 	  list-style: none;
 	  display: inline-block;
-	  padding: 15px 8px 15px 8px;
+	  padding: 15px 7px 15px 7px;
 	  margin: -3px;
 	  color: #FFFFFF;
 	}

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- 
+    normalize.css removes cross-browser differences in defaults, e.g.,
+    differences in how form elements appear between Firefox and IE
+    See: http://necolas.github.com/normalize.css/
+  -->
+  <link rel="stylesheet" href="../css/normalize.css">
+  <!--
+    application.css is where you put your styles
+  -->
+  <!--[if !IE]><!-->
+  <link rel="stylesheet" href="../css/application.css">
+  <!--<![endif]-->
+
+  <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="/css/ie-only.css" />
+  <![endif]-->
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+  <script src="../js/application.js"></script>
+
+  <title>Sean Leahy Speaks</title>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-8050600-1', 'seanleahy.com');
+    ga('send', 'pageview');
+
+  </script>
+</head>
+<body>
+  <div class="container">
+    <img src="../images/header.png" class="header">
+    <div class="nav">
+      <ul>
+        <li class="nav-li nav-link"><a href="/bureau/" class="links-main">HOME</a></li>
+        <li class="nav-li nav-link"><a href="/bureau/about" class="links-main">ABOUT YOU</a></li>
+        <li class="nav-li nav-link"><a href="#" class="links-main" id="service">MY SERVICES</a></li>
+        <li class="nav-li nav-link"><a href="/bureau/testimonials" class="links-main">TESTIMONIALS</a></li>
+        <li class="nav-li nav-link"><a href="/bureau/why_hire" class="links-main">WHY HIRE ME?</a></li>
+        <li class="nav-li nav-link"><a href="/bureau/salesshot" class="links-main">SALES SHOT</a></li>
+        <li class="nav-li nav-link"><a href="/bureau/contact" class="links-main">CONTACT</a></li>
+      </ul>
+    </div>
+    <div id="service-links">
+      <li><a href="/bureau/speaking" class="links">SPEAKING</a></li>
+      <li><a href="/bureau/training" class="links">TRAINING</a></li>
+      <li><a href="/bureau/consulting" class="links">CONSULTING</a></li>
+    </div>
+    <div id="tournament">
+      <div id="tournament-controls">
+        <div>
+          <input id="company-name" value="Company Name" maxlength="26">
+          <button id="company-button">Enter</button>
+        </div>
+        <div>
+          <input id="goal-field" value="Objective" maxlength="70">
+          <button id="goal-button">Enter</button>
+          <a href="../images/tournament_instructions.pdf" target="_blank" id="instructions">Instructions</a>
+        </div>
+        <div>
+          <input id="seed" value="Enter Idea" maxlength="55">
+          <button id="add">Add Idea</button>
+          <button id="begin">Begin Tournament</button>
+        </div>
+      </div>
+      <div id="tournament-details">
+        <h1 id="company-header"></h1>
+        <h2 id="goal-header"></h2>
+      </div>
+      <ul id="list">
+        <h1>Ideas</h1>
+      </ul>
+
+      <ul id="winners">
+      <h1>Top Three Priorities</h1>
+        <li id="winners-first"></li>
+        <li id="winners-second"></li>
+        <li id="winners-third"></li>
+        <button id="export">Print Results</button>
+      </ul>
+
+      <div class="bracket" id="bracket4">
+        <div class="round round1">
+         <div class="matchup m1">
+            <div class="outer team">
+              <p class="team1"></p>
+            </div>
+            <div class="outer team">
+              <p class="team4"></p>
+            </div>
+          </div>
+          <div class="matchup m2">
+            <div class="outer team">
+              <p class="team2"></p>
+            </div>
+            <div class="outer team">
+              <p class="team3"></p>
+            </div>
+          </div>
+        </div>
+        <div class="round round2">
+          <div class="matchup m3">
+            <div class="outer team">
+              <p class="w1"></p>
+            </div>
+            <div class="outer team">
+              <p class="w2"></p>
+            </div>
+          </div>
+        </div>
+        <div class="round winner">
+          <div class="outer team">
+              <p class="w3"></p>
+            </div>
+        </div>
+        <div class="round consolation">
+          <div class="matchup m4">
+            <div class="outer team">
+              <p class="l1"></p>
+            </div>
+            <div class="outer team">
+              <p class="l2"></p>
+            </div>
+          </div>
+          <div class="round third-place">
+            <div class="outer team">
+              <p class="w4"></p>
+            </div>
+          </div>
+          <div class="consolation-header">
+            <h2>Consolation</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="bracket" id="bracket8">
+        <div class="round round1">
+          <div class="matchup m1">
+            <div class="outer team">
+              <p class="team1"></p>
+            </div>
+            <div class="outer team">
+              <p class="team8"></p>
+            </div>
+          </div>
+          <div class="matchup m2">
+            <div class="outer team">
+              <p class="team4"></p>
+            </div>
+            <div class="outer team">
+              <p class="team5"></p>
+            </div>
+          </div>
+          <div class="matchup m3">
+            <div class="outer team">
+              <p class="team3"></p>
+            </div>
+            <div class="outer team">
+              <p class="team6"></p>
+            </div>
+          </div>
+          <div class="matchup m4">
+            <div class="outer team">
+              <p class="team2"></p>
+            </div>
+            <div class="outer team">
+              <p class="team7"></p>
+            </div>
+          </div>
+        </div>
+        <div class="round round2">
+          <div class="matchup m5">
+            <div class="outer team">
+              <p class="w1"></p>
+            </div>
+            <div class="outer team">
+              <p class="w2"></p>
+            </div>
+          </div>
+          <div class="matchup m6">
+            <div class="outer team">
+              <p class="w3"></p>
+            </div>
+            <div class="outer team">
+              <p class="w4"></p>
+            </div>
+          </div>
+        </div>
+        <div class="round round3">
+          <div class="matchup m7">
+            <div class="outer team">
+              <p class="w5"></p>
+            </div>
+            <div class="outer team">
+              <p class="w6"></p>
+            </div>
+          </div>
+        </div>
+        <div class="round winner">
+          <div class="outer team">
+              <p class="w7"></p>
+            </div>
+        </div>
+        <button class="challenge" id="challenge8">Challenge</button>
+        <div class="round consolation">
+          <div class="matchup m8">
+            <div class="outer team">
+              <p class="l5"></p>
+            </div>
+            <div class="outer team">
+              <p class="l6"></p>
+            </div>
+          </div>
+          <div class="round third-place">
+            <div class="outer team">
+              <p class="w8"></p>
+            </div>
+          </div>
+          <div class="consolation-header">
+            <h2>Consolation</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="bracket" id="bracket16">
+        <div class="round round1">
+          <div class="matchup m1">
+            <div class="outer team">
+              <p class="team1"></p>
+            </div>
+            <div class="outer team">
+              <p class="team16"></p>
+            </div>
+          </div>
+          <div class="matchup m2">
+            <div class="outer team">
+              <p class="team8"></p>
+            </div>
+            <div class="outer team">
+              <p class="team9"></p>
+            </div>
+          </div>
+          <div class="matchup m3">
+            <div class="outer team">
+              <p class="team5"></p>
+            </div>
+            <div class="outer team">
+              <p class="team12"></p>
+            </div>
+          </div>
+          <div class="matchup m4">
+            <div class="outer team">
+              <p class="team4"></p>
+            </div>
+            <div class="outer team">
+              <p class="team13"></p>
+            </div>
+          </div>
+          <div class="matchup m5">
+            <div class="outer team">
+              <p class="team6"></p>
+            </div>
+            <div class="outer team">
+              <p class="team11"></p>
+            </div>
+          </div>
+          <div class="matchup m6">
+            <div class="outer team">
+              <p class="team3"></p>
+            </div>
+            <div class="outer team">
+              <p class="team14"></p>
+            </div>
+          </div>
+          <div class="matchup m7">
+            <div class="outer team">
+              <p class="team7"></p>
+            </div>
+            <div class="outer team">
+              <p class="team10"></p>
+            </div>
+          </div>
+          <div class="matchup m8">
+            <div class="outer team">
+              <p class="team2"></p>
+            </div>
+            <div class="outer team">
+              <p class="team15"></p>
+            </div>
+          </div>
+        </div>
+        <div class="round round2">
+          <div class="matchup m9">
+            <div class="outer team">
+              <p class="w1"></p>
+            </div>
+            <div class="outer team">
+              <p class="w2"></p>
+            </div>
+          </div>
+          <div class="matchup m10">
+            <div class="outer team">
+              <p class="w3"></p>
+            </div>
+            <div class="outer team">
+              <p class="w4"></p>
+            </div>
+          </div>
+          <div class="matchup m11">
+            <div class="outer team">
+              <p class="w5"></p>
+            </div>
+            <div class="outer team">
+              <p class="w6"></p>
+            </div>
+          </div>
+          <div class="matchup m12">
+            <div class="outer team">
+              <p class="w7"></p>
+            </div>
+            <div class="outer team">
+              <p class="w8"></p>
+            </div>
+          </div>
+        </div>
+        <div class="round round3">
+          <div class="matchup m13">
+            <div class="outer team">
+              <p class="w9"></p>
+            </div>
+            <div class="outer team">
+              <p class="w10"></p>
+            </div>
+          </div>
+          <div class="matchup m14">
+            <div class="outer team">
+              <p class="w11"></p>
+            </div>
+            <div class="outer team">
+              <p class="w12"></p>
+            </div>
+          </div>
+        </div>
+        <div class="round round4">
+          <div class="matchup m15">
+            <div class="outer team">
+              <p class="w13"></p>
+            </div>
+            <div class="outer team">
+              <p class="w14"></p>
+            </div>
+          </div>
+        </div>
+        <div class="round winner">
+          <div class="outer team">
+              <p class="w15"></p>
+            </div>
+        </div>
+        <button class="challenge" id="challenge16">Challenge</button>
+        <div class="round consolation">
+          <div class="matchup m16">
+            <div class="outer team">
+              <p class="l13"></p>
+            </div>
+            <div class="outer team">
+              <p class="l14"></p>
+            </div>
+          </div>
+          <div class="round third-place">
+            <div class="outer team">
+              <p class="w16"></p>
+            </div>
+          </div>
+          <div class="consolation-header">
+            <h2>Consolation</h2>
+          </div>
+        </div>
+      </div>
+      <div id="challenge-div" class="popup">
+        <h3>Which idea would you like to challenge?</h3>
+        <select id="challenged">
+        </select>
+        <h3>Which idea would you like to challenge it with?</h3>
+        <select id="challengers"></select>
+        <div id="challenge-buttons">
+          <button id="challenge-cancel">Cancel</button>
+          <button id="challenge-ok">OK</button>
+        </div>
+      </div>
+      <div id="change-idea" class="popup">
+        <h3>What would you like instead?</h3>
+        <input id="new-idea" maxlength="60">
+        <button id="idea-delete">Delete</button>
+        <button id="idea-update">Update</button>
+      </div>
+
+      <div id="trademark">
+        <img src="../images/logo_color.jpg" id="tournament-logo">
+        <p>Confidential - Do not share, copy, or distribute</p>
+        <p>Copyright &copy; 2014, Sean Leahy, LLC</p>
+      </div>
+    </div>
+    <div class="footer">
+      <p id="footer-p">Copyright &copy; 2013, Sean Leahy, LLC</p>
+    </div>
+  </div>
+</body>
+</html>
