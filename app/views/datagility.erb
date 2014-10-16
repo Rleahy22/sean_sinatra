@@ -57,73 +57,88 @@
             </div>
         </div>
         <div id="datagility-right">
-            <div class="output-div" ng-show="outputs.salesProjection">
-                <label>Sales Inc.</label>
-                <p>{{outputs.salesProjection | currency:"$":0}}</p>
+            <div class="two-output">
+                <div class="two-output-div">
+                    <h3>Sales Increase</h3>
+                    <span>{{outputs.salesProjection | currency:"$":0}}</span>
+                </div>
+                <div class="two-output-div">
+                    <h3>GM Increase</h3>
+                    <span>{{outputs.gmIncrease | currency:"$":0}}</span>
+                </div>
             </div>
-            <div class="output-div">
-                <label>GM Increase</label>
-                <p>{{outputs.gmIncrease | currency:"$":0}}</p>
+            <div class="two-output">
+                <h3># of Orders (Manufacturer)</h3>
+                <div class="two-output-div">
+                    <h3>With Errors</h3>
+                    <span>{{outputs.mfgErrorsAfter | number:0}}</span>
+                </div>
+                <div class="two-output-div">
+                    <h3>Cost of Errors</h3>
+                    <span>{{outputs.mfgCostErrorsAfter | currency:"$":0}}</span>
+                </div>
             </div>
-            <div class="output-div">
-                <label>With Errors</label>
-                <p>{{outputs.mfgErrorsAfter | number:0}}</p>
+            <div class="two-output">
+                <h3># of Orders (Customer)</h3>
+                <div class="two-output-div">
+                    <h3>With Errors</h3>
+                    <span>{{outputs.custErrorsAfter | number:0}}</span>
+                </div>
+                <div class="two-output-div">
+                    <h3>Cost of Errors</h3>
+                    <span>{{outputs.custCostErrorsAfter | currency:"$":0}}</span>
+                </div>
             </div>
-            <div class="output-div">
-                <label>Cost of Errors</label>
-                <p>{{outputs.mfgCostErrorsAfter | currency:"$":0}}</p>
+            <div class="three-output">
+                <h3>Error Reduction Savings</h3>
+                <div class="three-output-div">
+                    <h3>Mfg</h3>
+                    <span>{{outputs.mfgSavings | currency:"$":0}}</span>
+                </div>
+                <div class="three-output-div">
+                    <h3>Cust</h3>
+                    <span>{{outputs.custSavings | currency:"$":0}}</span>
+                </div>
+                <div class="three-output-div">
+                    <h3>Total</h3>
+                    <span>{{outputs.totalSavings | currency:"$":0}}</span>
+                </div>
             </div>
-            <div class="output-div">
-                <label>with Errors</label>
-                <p>{{outputs.custErrorsAfter | number:0}}</p>
+            <div class="four-output">
+                <div class="four-output-div">
+                    <h3>Total Benefit</h3>
+                    <span>{{outputs.totalBenefit | currency:"$":0}}</span>
+                </div>
+                <div class="four-output-div">
+                    <h3>Desired ROI</h3>
+                    <span ng-show="inputs.desiredRoi">{{inputs.desiredRoi | number:0}}%</span>
+                </div>
+                <div class="four-output-div">
+                    <h3>Fee (Calculated)</h3>
+                    <span>{{outputs.feeCalculated | currency:"$":0}}</span>
+                </div>
+                <div class="four-output-div">
+                    <h3>Payback</h3>
+                    <span>{{outputs.payback | number:2}}</span>
+                </div>
             </div>
-            <div class="output-div">
-                <label>Cost of Errors</label>
-                <p>{{outputs.custCostErrorsAfter | currency:"$":0}}</p>
-            </div>
-            <div class="output-div">
-                <label>Mfg Savings</label>
-                <p>{{outputs.mfgSavings | currency:"$":0}}</p>
-            </div>
-            <div class="output-div">
-                <label>Cust Savings</label>
-                <p>{{outputs.custSavings | currency:"$":0}}</p>
-            </div>
-            <div class="output-div">
-                <label>Total Savings</label>
-                <p>{{outputs.totalSavings | currency:"$":0}}</p>
-            </div>
-            <div class="output-div">
-                <label>Total Benefit</label>
-                <p>{{outputs.totalBenefit | currency:"$":0}}</p>
-            </div>
-            <div class="output-div" ng-show="inputs.desiredRoi">
-                <label>Desired ROI</label>
-                <p>{{inputs.desiredRoi | number:0}}%</p>
-            </div>
-            <div class="output-div">
-                <label>Fee (Calculated)</label>
-                <p>{{outputs.feeCalculated | currency:"$":0}}</p>
-            </div>
-            <div class="output-div">
-                <label>Payback</label>
-                <p>{{outputs.payback | number:2}}</p>
-            </div>
-            <div class="output-div">
-                <label>Total $ Benefit</label>
-                <p>{{outputs.totalBenefit | currency:"$":0}}</p>
-            </div>
-            <div class="output-div">
-                <label>Fee</label>
-                <p>{{outputs.fee | currency:"$":0}}</p>
-            </div>
-            <div class="output-div">
-                <label>ROI (Calculated)</label>
-                <p>{{outputs.roiAfter | number:0}}%</p>
-            </div>
-            <div class="output-div">
-                <label></label>
-                <p>{{outputs.paybackAfter | number:2}}</p>
+            <div class="four-output">
+                <div class="four-output-div">
+                    <h3>Total Benefit</h3>
+                    <span>{{outputs.totalBenefit | currency:"$":0}}</span>
+                </div>
+                <div class="four-output-div">
+                    <h3>ROI (Calculated)</h3>
+                    <span ng-show="outputs.totalBenefit">{{outputs.roiAfter | number:0}}%</span>
+                </div>
+                <div class="four-output-div">
+                    <h3>Fee</h3>
+                    <span ng-show="outputs.totalBenefit">{{outputs.fee | currency:"$":0}}</span>
+                </div>
+                <div class="four-output-div">
+                    <h3>Payback</h3>
+                    <span>{{outputs.paybackAfter | number:2}}</span>
+                </div>
             </div>
         </div>
     </div>
