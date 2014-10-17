@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- 
+            normalize.css removes cross-browser differences in defaults, e.g.,
+            differences in how form elements appear between Firefox and IE
+            See: http://necolas.github.com/normalize.css/
+        -->
+        <link rel="stylesheet" href="/css/normalize.css">
+        <!--
+            application.css is where you put your styles
+        -->
+        <!--[if !IE]><!-->
+            <link rel="stylesheet" href="/css/application.css">
+        <!--<![endif]-->
+
+        <!--[if IE]>
+            <link rel="stylesheet" type="text/css" href="/css/ie-only.css" />
+        <![endif]-->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+        <script src="/js/datagility.js"></script>
+
+        <title>Sean Leahy Speaks</title>
+        <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-8050600-1', 'seanleahy.com');
+        ga('send', 'pageview');
+
+        </script>
+    </head>
+<body>
+    <div class="container">
+        <img src="images/header.png" class="header">
+        <div class="nav">
+            <ul>
+                <li class="nav-li nav-link"><a href="/" class="links-main">HOME</a></li>
+                <li class="nav-li nav-link"><a href="/about" class="links-main">ABOUT YOU</a></li>
+                <li class="nav-li nav-link"><a href="#" class="links-main" id="service">MY SERVICES</a></li>
+                <li class="nav-li nav-link"><a href="/testimonials" class="links-main">TESTIMONIALS</a></li>
+                <li class="nav-li nav-link"><a href="/why_hire" class="links-main">WHY HIRE ME?</a></li>
+                <li class="nav-li nav-link"><a href="/tournament" class="links-main">TOURNAMENT</a></li>
+                <li class="nav-li nav-link"><a href="/salesshot" class="links-main">SALES SHOT</a></li>
+                <li class="nav-li nav-link"><a href="/contact" class="links-main">CONTACT</a></li>
+            </ul>
+        </div>
+        <div id="service-links">
+            <li><a href="/speaking" class="links">SPEAKING</a></li>
+            <li><a href="/training" class="links">TRAINING</a></li>
+            <li><a href="/consulting" class="links">CONSULTING</a></li>
+        </div>
+        <div ng-app="datagility">
+            <div class="datagility" ng-controller="datagilityCtrl">
+                <div id="datagility-left">
+                    <div class="input-div">
+                        <label>Sales</label>
+                        <input class="input-box" type="number" id="sales" ng-model="inputs.sales" autofocus="autofocus">
+                    </div>
+                    <div class="input-div">
+                        <label>Average Order Size $ (Mfg)</label>
+                        <input class="input-box" type="number" id="averageOrderMfg" ng-model="inputs.mfgAverageOrder">
+                    </div>
+                    <div class="input-div">
+                        <label>Average Order Size $ (Cust)</label>
+                        <input class="input-box" type="number" id="averageOrderCust" ng-model="inputs.custAverageOrder">
+                    </div>
+                    <div class="input-div">
+                        <label>Gross Margin %</label>
+                        <input class="input-box" type="number" id="grossMargin"ng-model="inputs.grossMargin">
+                    </div>
+                    <div class="input-div">
+                        <label>Estimated Sales increase %</label>
+                        <input class="input-box" type="number" id="salesIncreaseEst" ng-model="inputs.estimatedSalesInc">
+                    </div>
+                    <div class="input-div">
+                        <label>% of orders with errors (Mfg)</label>
+                        <input class="input-box" type="number" id="orderErrorsMfg" ng-model="inputs.mfgOrderErrors">
+                    </div>
+                    <div class="input-div">
+                        <label>% of orders with errors (Cust)</label>
+                        <input class="input-box" type="number" id="orderErrorsCust" ng-model="inputs.custOrderErrors">
+                    </div>
+                    <div class="input-div">
+                        <label>Cost to fix order with error (Mfg)</label>
+                        <input class="input-box" type="number" id="costErrorMfg" ng-model="inputs.mfgErrorCost">
+                    </div>
+                    <div class="input-div">
+                        <label>Cost to fix order with error (Cust)</label>
+                        <input class="input-box" type="number" id="costErrorCust" ng-model="inputs.custErrorCost">
+                    </div>
+                    <h2>Error reductions savings %</h2>
+                    <div class="input-div">
+                        <label>Manufacturer</label>
+                        <input class="input-box" type="number" id="errorSavingsMfg" ng-model="inputs.mfgErrorSavings">
+                    </div>
+                    <div class="input-div">
+                        <label>Customer</label>
+                        <input class="input-box" type="number" id="errorSavingsCust" ng-model="inputs.custErrorSavings">
+                    </div>
+                    <div class="input-div">
+                        <label>Desired ROI</label>
+                        <input class="input-box" type="number" id="desiredRoi" ng-model="inputs.desiredRoi">
+                    </div>
+                    <div class="input-div">
+                        <label>Desired Payback</label>
+                    </div>
+                </div>
+                <div id="datagility-right">
+                    <div class="two-output">
+                        <div class="two-output-div">
+                            <h3>Sales Increase</h3>
+                            <span>{{outputs.salesProjection | currency:"$":0}}</span>
+                        </div>
+                        <div class="two-output-div">
+                            <h3>GM Increase</h3>
+                            <span>{{outputs.gmIncrease | currency:"$":0}}</span>
+                        </div>
+                    </div>
+                    <div class="two-output">
+                        <h3># of Orders (Manufacturer)</h3>
+                        <div class="two-output-div">
+                            <h3>With Errors</h3>
+                            <span>{{outputs.mfgErrorsAfter | number:0}}</span>
+                        </div>
+                        <div class="two-output-div">
+                            <h3>Cost of Errors</h3>
+                            <span>{{outputs.mfgCostErrorsAfter | currency:"$":0}}</span>
+                        </div>
+                    </div>
+                    <div class="two-output">
+                        <h3># of Orders (Customer)</h3>
+                        <div class="two-output-div">
+                            <h3>With Errors</h3>
+                            <span>{{outputs.custErrorsAfter | number:0}}</span>
+                        </div>
+                        <div class="two-output-div">
+                            <h3>Cost of Errors</h3>
+                            <span>{{outputs.custCostErrorsAfter | currency:"$":0}}</span>
+                        </div>
+                    </div>
+                    <div class="three-output">
+                        <h3>Error Reduction Savings</h3>
+                        <div class="three-output-div">
+                            <h3>Mfg</h3>
+                            <span>{{outputs.mfgSavings | currency:"$":0}}</span>
+                        </div>
+                        <div class="three-output-div">
+                            <h3>Cust</h3>
+                            <span>{{outputs.custSavings | currency:"$":0}}</span>
+                        </div>
+                        <div class="three-output-div">
+                            <h3>Total</h3>
+                            <span>{{outputs.totalSavings | currency:"$":0}}</span>
+                        </div>
+                    </div>
+                    <div class="four-output">
+                        <div class="four-output-div">
+                            <h3>Total Benefit</h3>
+                            <span>{{outputs.totalBenefit | currency:"$":0}}</span>
+                        </div>
+                        <div class="four-output-div">
+                            <h3>Desired ROI</h3>
+                            <span ng-show="inputs.desiredRoi">{{inputs.desiredRoi | number:0}}%</span>
+                        </div>
+                        <div class="four-output-div">
+                            <h3>Fee (Calculated)</h3>
+                            <span>{{outputs.feeCalculated | currency:"$":0}}</span>
+                        </div>
+                        <div class="four-output-div">
+                            <h3>Payback</h3>
+                            <span>{{outputs.payback | number:2}}</span>
+                        </div>
+                    </div>
+                    <div class="four-output">
+                        <div class="four-output-div">
+                            <h3>Total Benefit</h3>
+                            <span>{{outputs.totalBenefit | currency:"$":0}}</span>
+                        </div>
+                        <div class="four-output-div">
+                            <h3>ROI (Calculated)</h3>
+                            <span ng-show="outputs.totalBenefit">{{outputs.roiAfter | number:0}}%</span>
+                        </div>
+                        <div class="four-output-div">
+                            <h3>Fee</h3>
+                            <span ng-show="outputs.totalBenefit">{{outputs.fee | currency:"$":0}}</span>
+                        </div>
+                        <div class="four-output-div">
+                            <h3>Payback</h3>
+                            <span>{{outputs.paybackAfter | number:2}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p id="footer-p">Copyright &copy; 2013, Sean Leahy, LLC <span id="contact">(847) 922-2181<span class="vert-bar">|</span><a href="mailto:sean@seanleahy.com">Sean@SeanLeahy.com</a><span class="vert-bar">|</span><a href="http://www.seanleahy.com">www.SeanLeahy.com</a></span></p>
+        </div>
+    </div>
+</body>
+</html>
